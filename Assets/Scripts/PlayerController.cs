@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 movement = new Vector2(horizontal * speed, rb.velocity.y);
 
-       c rb.velocity = movement;
+       rb.velocity = movement;
     }
 
     private void Jump()
