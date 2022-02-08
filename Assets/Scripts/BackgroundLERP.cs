@@ -15,9 +15,9 @@ public class BackgroundLERP : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      if()
+      /*if()
         {
             //Lerp Code;
-        }
+        }*/
     }
 }
