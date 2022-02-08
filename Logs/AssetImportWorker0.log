@@ -468,3 +468,4 @@ Received Import Request.
 Start importing Assets/Anim/MegaMan_Anim_Controller.controller using Guid(8095ed2427d9aef4a81dc3a9042753cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f539c31f5093b3ea184902ffd12079b') in 0.004191 seconds 
   Import took 0.007356 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
