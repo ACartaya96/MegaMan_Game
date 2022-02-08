@@ -53,6 +53,10 @@ public class Bullet_Script : MonoBehaviour
         {
             Destroy(gameObject, 0.01f);
         }
+        if(other.gameObject.CompareTag("Screen"))
+        {
+            Destroy(gameObject, 0.01f);
+        }
         
     }
 

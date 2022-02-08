@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] int bulletDamage = 1;
     [SerializeField] float bulletSpeed = 5f;
     public float fallMultiplier = 2.5f;
-    public float lowJumpMultiplier = 2f;
+    public float lowJumpMultiplier = 1.5f;
     public int currentHealth;
     public int maxHealth =28;
 
@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
         Color raycastColor;
         RaycastHit2D raycastHit;
         float raycastDistance = 0.05f;
-        int layerMask = 1 << LayerMask.NameToLayer("ground");
+        int layerMask = 1 << LayerMask.NameToLayer("Ground");
 
         //ground check
         Vector3 box_orgin = box2d.bounds.center;
@@ -103,6 +103,7 @@ public class PlayerController : MonoBehaviour
         bullet.GetComponent<Bullet_Script>().SetBulletSpeed(bulletSpeed);
         bullet.GetComponent<Bullet_Script>().SetBulletDirection((isFacingRight) ? Vector2.right : Vector2.left );
         bullet.GetComponent<Bullet_Script>().Shoot();
+        
     }
 
     void PlayerDirectionInput()
@@ -204,7 +205,7 @@ public class PlayerController : MonoBehaviour
         float shootTimeLength= 0;
         float keyShootReleaseTimeLength = 0;
 
-        keyShoot = Input.GetKey(KeyCode.C); // enter key
+        keyShoot = Input.GetButtonDown("Primary Fire"); // enter key
 
         if(keyShoot && keyShootRelease )
         {
