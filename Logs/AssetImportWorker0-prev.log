@@ -15,11 +15,11 @@ C:/Users/LUISE/OneDrive/Documents/GitHub/MegaMan_Game
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-57285
+52071
 Successfully changed project path to: C:/Users/LUISE/OneDrive/Documents/GitHub/MegaMan_Game
 C:/Users/LUISE/OneDrive/Documents/GitHub/MegaMan_Game
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 39.37 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 40.80 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.26f1 (7298b473bc1a)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.26f1/Editor/Data/Resources/UnitySubsystems
@@ -35,92 +35,92 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.26f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.26f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.26f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56408
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56736
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.26f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.26f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001716 seconds.
+Registered in 0.002356 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 38.80 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 40.53 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.495 seconds
+- Completed reload, in  0.505 seconds
 Domain Reload Profiling:
-	ReloadAssembly (496ms)
-		BeginReloadAssembly (42ms)
+	ReloadAssembly (505ms)
+		BeginReloadAssembly (41ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (390ms)
-			LoadAssemblies (40ms)
+		EndReloadAssembly (396ms)
+			LoadAssemblies (39ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
 			SetupTypeCache (131ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (27ms)
-			SetupLoadedEditorAssemblies (144ms)
+			RebuildScriptCaches (26ms)
+			SetupLoadedEditorAssemblies (151ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (39ms)
+				RefreshPlugins (41ms)
 				BeforeProcessingInitializeOnLoad (9ms)
-				ProcessInitializeOnLoadAttributes (70ms)
-				ProcessInitializeOnLoadMethodAttributes (23ms)
+				ProcessInitializeOnLoadAttributes (72ms)
+				ProcessInitializeOnLoadMethodAttributes (26ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.004272 seconds.
+Registered in 0.005158 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 36.03 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 39.35 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.938 seconds
+- Completed reload, in  0.960 seconds
 Domain Reload Profiling:
-	ReloadAssembly (939ms)
-		BeginReloadAssembly (121ms)
+	ReloadAssembly (961ms)
+		BeginReloadAssembly (118ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (16ms)
-		EndReloadAssembly (766ms)
-			LoadAssemblies (71ms)
+		EndReloadAssembly (785ms)
+			LoadAssemblies (80ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (257ms)
+			SetupTypeCache (269ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (41ms)
-			SetupLoadedEditorAssemblies (283ms)
+			SetupLoadedEditorAssemblies (280ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
+				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (36ms)
-				BeforeProcessingInitializeOnLoad (56ms)
-				ProcessInitializeOnLoadAttributes (166ms)
-				ProcessInitializeOnLoadMethodAttributes (15ms)
-				AfterProcessingInitializeOnLoad (6ms)
+				RefreshPlugins (39ms)
+				BeforeProcessingInitializeOnLoad (57ms)
+				ProcessInitializeOnLoadAttributes (162ms)
+				ProcessInitializeOnLoadMethodAttributes (13ms)
+				AfterProcessingInitializeOnLoad (5ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 0.73 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.63 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2197 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 95.9 MB.
-System memory in use after: 95.9 MB.
+System memory in use after: 96.0 MB.
 
 Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 2630.
-Total: 3.080800 ms (FindLiveObjects: 0.180900 ms CreateObjectMapping: 0.074900 ms MarkObjects: 2.774100 ms  DeleteObjects: 0.050200 ms)
+Total: 3.830200 ms (FindLiveObjects: 0.145100 ms CreateObjectMapping: 0.074900 ms MarkObjects: 3.554800 ms  DeleteObjects: 0.054500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -135,1208 +135,427 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets
-  artifactKey: Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets using Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42d402b061de3733987d63b9cc3b64de') in 0.013628 seconds 
-  Import took 0.016377 seconds .
+  path: Assets/Level Tiles/MEga man tile floors take 2 BIG.png
+  artifactKey: Guid(de728e281a73f4a449ea7b940876dcf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level Tiles/MEga man tile floors take 2 BIG.png using Guid(de728e281a73f4a449ea7b940876dcf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e2339cceed40ddfd5aa492dc8d4a505') in 0.098247 seconds 
+  Import took 0.102525 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 6.422103 seconds.
-  path: Assets/Level Tiles
-  artifactKey: Guid(23d3d51dfa87d4447aeee0f95e2e0b91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles using Guid(23d3d51dfa87d4447aeee0f95e2e0b91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e05ff0ffdf5742b6ed86af6c7dc8da54') in 0.006822 seconds 
-  Import took 0.009931 seconds .
+  Time since last request: 11.142421 seconds.
+  path: Assets/Level Tiles/MEga man tile floors take 2.png
+  artifactKey: Guid(a4bbb73741e71734491a9e7fe0bcb83b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level Tiles/MEga man tile floors take 2.png using Guid(a4bbb73741e71734491a9e7fe0bcb83b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a47a1a56150f2dfb06447c5110d32d07') in 0.016468 seconds 
+  Import took 0.021687 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 12.512550 seconds.
-  path: Assets/HUDs and Menu
-  artifactKey: Guid(1b0378507f5c7154db2753693125faf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HUDs and Menu using Guid(1b0378507f5c7154db2753693125faf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd38cbe55d831e9f882df65a4438eed80') in 0.007185 seconds 
-  Import took 0.010601 seconds .
+  Time since last request: 17.071993 seconds.
+  path: Assets/Level Tiles/MEga man tile floors take 2.png
+  artifactKey: Guid(a4bbb73741e71734491a9e7fe0bcb83b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level Tiles/MEga man tile floors take 2.png using Guid(a4bbb73741e71734491a9e7fe0bcb83b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07fd8f8117d55eeb635b510ee997e824') in 0.009227 seconds 
+  Import took 0.014661 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 71.497012 seconds.
-  path: Assets/Level Tiles/roof tiles top 1 n 2.gif
-  artifactKey: Guid(92d2c3f938aaeb448bdd0df40d452210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/roof tiles top 1 n 2.gif using Guid(92d2c3f938aaeb448bdd0df40d452210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd30f412322cfdcce7873ecb131c0f4ff') in 0.090326 seconds 
-  Import took 0.094922 seconds .
+  Time since last request: 114.771894 seconds.
+  path: Assets/Level Tiles/MEga man tile floors take 2.png
+  artifactKey: Guid(a4bbb73741e71734491a9e7fe0bcb83b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level Tiles/MEga man tile floors take 2.png using Guid(a4bbb73741e71734491a9e7fe0bcb83b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fab39e51c5a98c4246c2416c267bbe3') in 0.012320 seconds 
+  Import took 0.017584 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 493.129134 seconds.
-  path: Assets/Level Tiles/roof tiles top 1 n 2.gif
-  artifactKey: Guid(92d2c3f938aaeb448bdd0df40d452210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/roof tiles top 1 n 2.gif using Guid(92d2c3f938aaeb448bdd0df40d452210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20a649db7b7c800dd230def49f9af53f') in 0.011111 seconds 
-  Import took 0.015224 seconds .
+  Time since last request: 30.529575 seconds.
+  path: Assets/Level Tiles/MEga man tile floors take 2.png
+  artifactKey: Guid(a4bbb73741e71734491a9e7fe0bcb83b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level Tiles/MEga man tile floors take 2.png using Guid(a4bbb73741e71734491a9e7fe0bcb83b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b3cf4db26e79516b617298e3a2ef36b') in 0.060755 seconds 
+  Import took 0.065651 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 28.392314 seconds.
-  path: Assets/Level Tiles/roof tiles top 1 n 2.gif
-  artifactKey: Guid(92d2c3f938aaeb448bdd0df40d452210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/roof tiles top 1 n 2.gif using Guid(92d2c3f938aaeb448bdd0df40d452210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77d0d5e97aceed980d5a6ff41d5760a2') in 0.006665 seconds 
-  Import took 0.010037 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.053728 seconds.
-  path: Assets/Level Tiles/roof tiles top 1 n 2.gif
-  artifactKey: Guid(92d2c3f938aaeb448bdd0df40d452210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/roof tiles top 1 n 2.gif using Guid(92d2c3f938aaeb448bdd0df40d452210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c977d3a552b98779fe609e4928dc18f') in 0.007143 seconds 
-  Import took 0.011516 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 101.287362 seconds.
-  path: Assets/Level Tiles/roof tiles top 1 n 2.gif
-  artifactKey: Guid(92d2c3f938aaeb448bdd0df40d452210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/roof tiles top 1 n 2.gif using Guid(92d2c3f938aaeb448bdd0df40d452210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6c0f46fd1a0f9cd9627b23b9a6a9990') in 0.036571 seconds 
-  Import took 0.040633 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 90.120572 seconds.
-  path: Assets/Level Tiles/platform top.png
-  artifactKey: Guid(1d7524cc7e0dc034ab06cbcfb96304d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/platform top.png using Guid(1d7524cc7e0dc034ab06cbcfb96304d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '209204bc3faf4e8802600ed63d9c9f38') in 0.017748 seconds 
-  Import took 0.021622 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.000473 seconds.
-  path: Assets/Level Tiles/platform top.png
-  artifactKey: Guid(1d7524cc7e0dc034ab06cbcfb96304d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/platform top.png using Guid(1d7524cc7e0dc034ab06cbcfb96304d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '499c19a32c0ccc55461aa966f91b6399') in 0.013744 seconds 
-  Import took 0.017925 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 36.494775 seconds.
-  path: Assets/Level Tiles/Floor below and above.prefab
-  artifactKey: Guid(2e1d55864839b2f43ae49b08bf5b2335) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Floor below and above.prefab using Guid(2e1d55864839b2f43ae49b08bf5b2335) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cf8bfeb9da7276114f5640678b8d94a') in 0.047048 seconds 
-  Import took 0.050172 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.215686 seconds.
-  path: Assets/Level Tiles/Floor below and above.prefab
-  artifactKey: Guid(2e1d55864839b2f43ae49b08bf5b2335) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Floor below and above.prefab using Guid(2e1d55864839b2f43ae49b08bf5b2335) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2424615f6610cd3eaf42c73d8e522d52') in 0.010500 seconds 
-  Import took 0.016067 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 20.751516 seconds.
-  path: Assets/Level Tiles/Floor Tiles.prefab
-  artifactKey: Guid(e0a09f0d6cbfc3d4d8451f407cdabf19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Floor Tiles.prefab using Guid(e0a09f0d6cbfc3d4d8451f407cdabf19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1098db4efe9613b2e01674a69873b75e') in 0.014972 seconds 
-  Import took 0.018746 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 21.610333 seconds.
-  path: Assets/Level Tiles/Floor Tiles.prefab
-  artifactKey: Guid(e0a09f0d6cbfc3d4d8451f407cdabf19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Floor Tiles.prefab using Guid(e0a09f0d6cbfc3d4d8451f407cdabf19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b3d6adc1ec7c23a23a442c9878c7229') in 0.020981 seconds 
-  Import took 0.025539 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000171 seconds.
-  path: Assets/Level Tiles/Scene Tiles 1.asset
-  artifactKey: Guid(c0bc5bfcdfc41f147b396518daa26aa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Scene Tiles 1.asset using Guid(c0bc5bfcdfc41f147b396518daa26aa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ef8c77f34c4b1a36fb6a9f54b95c513') in 0.023315 seconds 
-  Import took 0.027308 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 19.413505 seconds.
-  path: Assets/Level Tiles/Floor Tiles.prefab
-  artifactKey: Guid(e0a09f0d6cbfc3d4d8451f407cdabf19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Floor Tiles.prefab using Guid(e0a09f0d6cbfc3d4d8451f407cdabf19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ef98de6d6b5543a0589934e0f79a0d2') in 0.016202 seconds 
-  Import took 0.021617 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000182 seconds.
-  path: Assets/Level Tiles/Scene tile 2.asset
-  artifactKey: Guid(71715fabb1be85443b0b889be04a37c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Scene tile 2.asset using Guid(71715fabb1be85443b0b889be04a37c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09043c25e91df47019620868ad4aaf2e') in 0.012272 seconds 
-  Import took 0.015476 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 15.659811 seconds.
-  path: Assets/Level Tiles/Floor Tiles.prefab
-  artifactKey: Guid(e0a09f0d6cbfc3d4d8451f407cdabf19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Floor Tiles.prefab using Guid(e0a09f0d6cbfc3d4d8451f407cdabf19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aeb965c120ddd0a32e5500f4761bafb7') in 0.015897 seconds 
-  Import took 0.020687 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000158 seconds.
-  path: Assets/Level Tiles/Scene Tile 3.asset
-  artifactKey: Guid(f146386ce4c95d34b8c2df4d5d364c8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Scene Tile 3.asset using Guid(f146386ce4c95d34b8c2df4d5d364c8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82ef1a370249c71a289d2f55f3025e12') in 0.013202 seconds 
-  Import took 0.017494 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.411991 seconds.
-  path: Assets/Level Tiles/Floor Tiles.prefab
-  artifactKey: Guid(e0a09f0d6cbfc3d4d8451f407cdabf19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Floor Tiles.prefab using Guid(e0a09f0d6cbfc3d4d8451f407cdabf19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4aa48fe031abaf76dd73bc1a6dc12e4') in 0.014928 seconds 
-  Import took 0.019252 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000247 seconds.
-  path: Assets/Level Tiles/Scene Tile 4.asset
-  artifactKey: Guid(e72ad489a9f578b4ba14e2260a1b0274) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Scene Tile 4.asset using Guid(e72ad489a9f578b4ba14e2260a1b0274) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccfffa2d6d32d1943642a7048baeb7cc') in 0.012774 seconds 
-  Import took 0.016202 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 17.081202 seconds.
-  path: Assets/Level Tiles/Floor Tiles.prefab
-  artifactKey: Guid(e0a09f0d6cbfc3d4d8451f407cdabf19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Floor Tiles.prefab using Guid(e0a09f0d6cbfc3d4d8451f407cdabf19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be1727b934d158c36e928ffd17ae110a') in 0.011673 seconds 
-  Import took 0.015406 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000169 seconds.
-  path: Assets/Level Tiles/Scene Tile 5.asset
-  artifactKey: Guid(4b0f1a4b47305ca46b038802ab5b9ef1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Scene Tile 5.asset using Guid(4b0f1a4b47305ca46b038802ab5b9ef1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a445feee775fe71afab0e2dce2c2dfa') in 0.010085 seconds 
-  Import took 0.013172 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.144299 seconds.
-  path: Assets/Level Tiles/Floor Tiles.prefab
-  artifactKey: Guid(e0a09f0d6cbfc3d4d8451f407cdabf19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Floor Tiles.prefab using Guid(e0a09f0d6cbfc3d4d8451f407cdabf19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5590a860376fa0919f192d815c7b65e0') in 0.015058 seconds 
-  Import took 0.020252 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000184 seconds.
-  path: Assets/Level Tiles/Scene Tile 6.asset
-  artifactKey: Guid(29ab2f6df972c1a40ae37d092272cfd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Scene Tile 6.asset using Guid(29ab2f6df972c1a40ae37d092272cfd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac9f7b21701c94c045da5730f258c21d') in 0.011796 seconds 
-  Import took 0.015508 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 16.460192 seconds.
-  path: Assets/Level Tiles/Floor Tiles.prefab
-  artifactKey: Guid(e0a09f0d6cbfc3d4d8451f407cdabf19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Floor Tiles.prefab using Guid(e0a09f0d6cbfc3d4d8451f407cdabf19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79ef29dc898fd6d9392f5c92b9c89032') in 0.015253 seconds 
-  Import took 0.018938 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000175 seconds.
-  path: Assets/Level Tiles/Floor Top.asset
-  artifactKey: Guid(0a7435603dc1cd742ba1cc90d2a070f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Floor Top.asset using Guid(0a7435603dc1cd742ba1cc90d2a070f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c595c464194463f6c2bb1b051901620a') in 0.011891 seconds 
-  Import took 0.015843 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 75.471178 seconds.
-  path: Assets/Level Tiles/platform top.png
-  artifactKey: Guid(1d7524cc7e0dc034ab06cbcfb96304d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/platform top.png using Guid(1d7524cc7e0dc034ab06cbcfb96304d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '731ede6ea86bd8b9e33e1f21310d4371') in 0.009914 seconds 
-  Import took 0.012999 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 23.235881 seconds.
-  path: Assets/Level Tiles/platform top.png
-  artifactKey: Guid(1d7524cc7e0dc034ab06cbcfb96304d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/platform top.png using Guid(1d7524cc7e0dc034ab06cbcfb96304d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7cd6b2e12b6e3e82088e2c990341b9d7') in 0.010975 seconds 
-  Import took 0.014266 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 31.185192 seconds.
-  path: Assets/Level Tiles/platform top.png
-  artifactKey: Guid(1d7524cc7e0dc034ab06cbcfb96304d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/platform top.png using Guid(1d7524cc7e0dc034ab06cbcfb96304d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b1556bb2d001f2f170ee612d1a99cb7') in 0.009162 seconds 
-  Import took 0.012613 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 19.803726 seconds.
-  path: Assets/Level Tiles/roof tiles top 1 n 2.gif
-  artifactKey: Guid(92d2c3f938aaeb448bdd0df40d452210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/roof tiles top 1 n 2.gif using Guid(92d2c3f938aaeb448bdd0df40d452210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca3b59b97629d8fdb90988d8aee18e35') in 0.035033 seconds 
-  Import took 0.038788 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 416.582819 seconds.
-  path: Assets/Level Tiles/roof tiles top 1 n 2.gif
-  artifactKey: Guid(92d2c3f938aaeb448bdd0df40d452210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/roof tiles top 1 n 2.gif using Guid(92d2c3f938aaeb448bdd0df40d452210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5479b6c4b30c65ff2c166211ace16881') in 0.031305 seconds 
-  Import took 0.035015 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 13.789359 seconds.
-  path: Assets/Level Tiles/roof tiles top 1 n 2.gif
-  artifactKey: Guid(92d2c3f938aaeb448bdd0df40d452210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/roof tiles top 1 n 2.gif using Guid(92d2c3f938aaeb448bdd0df40d452210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ee903f15be620fad980c7bb18b79e9a') in 0.021930 seconds 
-  Import took 0.024961 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 16.582611 seconds.
-  path: Assets/Level Tiles/roof tiles top 1 n 2.gif
-  artifactKey: Guid(92d2c3f938aaeb448bdd0df40d452210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/roof tiles top 1 n 2.gif using Guid(92d2c3f938aaeb448bdd0df40d452210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4f2ed4c68aa427828b1c2b733971693') in 0.033386 seconds 
-  Import took 0.037252 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.968870 seconds.
-  path: Assets/Level Tiles/roof tiles top 1 n 2.gif
-  artifactKey: Guid(92d2c3f938aaeb448bdd0df40d452210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/roof tiles top 1 n 2.gif using Guid(92d2c3f938aaeb448bdd0df40d452210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ddd16e3f78d39de7e01c67a37c870858') in 0.026152 seconds 
-  Import took 0.029870 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 57.143445 seconds.
-  path: Assets/Level Tiles/Floor Tiles.prefab
-  artifactKey: Guid(e0a09f0d6cbfc3d4d8451f407cdabf19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Floor Tiles.prefab using Guid(e0a09f0d6cbfc3d4d8451f407cdabf19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8739168d84757b00bb0c24fa0b723d3f') in 0.021994 seconds 
-  Import took 0.026540 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000164 seconds.
-  path: Assets/Level Tiles/platform top.asset
-  artifactKey: Guid(3bda43c435098a645b7c0cab7d065160) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/platform top.asset using Guid(3bda43c435098a645b7c0cab7d065160) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e72fe2090405ece5c558f183f9f64057') in 0.007459 seconds 
-  Import took 0.011138 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 17.088205 seconds.
-  path: Assets/Level Tiles/platform top.png
-  artifactKey: Guid(1d7524cc7e0dc034ab06cbcfb96304d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/platform top.png using Guid(1d7524cc7e0dc034ab06cbcfb96304d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c02f5c2d46f3ac0784ceda72e0794d63') in 0.011555 seconds 
-  Import took 0.014666 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 141.257030 seconds.
-  path: Assets/Level Tiles/roof tiles top 1 n 2.gif
-  artifactKey: Guid(92d2c3f938aaeb448bdd0df40d452210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/roof tiles top 1 n 2.gif using Guid(92d2c3f938aaeb448bdd0df40d452210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '284a316b0a7fdc9ca338d35e74730407') in 0.028045 seconds 
-  Import took 0.031343 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.731605 seconds.
-  path: Assets/Level Tiles/platform top.png
-  artifactKey: Guid(1d7524cc7e0dc034ab06cbcfb96304d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/platform top.png using Guid(1d7524cc7e0dc034ab06cbcfb96304d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '204943c0cbaaec32a92b81729f883ce0') in 0.011182 seconds 
-  Import took 0.014705 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 593.212383 seconds.
-  path: Assets/Level Tiles/floor tiles-Sheet.png
-  artifactKey: Guid(a064795d1f9562f479a25fb3ecd9f12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/floor tiles-Sheet.png using Guid(a064795d1f9562f479a25fb3ecd9f12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f12d2239f213102ed9cf24e4578c8bb7') in 0.018589 seconds 
-  Import took 0.023112 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 40.811205 seconds.
-  path: Assets/Level Tiles/floor tiles-Sheet.png
-  artifactKey: Guid(a064795d1f9562f479a25fb3ecd9f12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/floor tiles-Sheet.png using Guid(a064795d1f9562f479a25fb3ecd9f12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4e47189145e72b2c4b0b3906ee148b2') in 0.010346 seconds 
-  Import took 0.013756 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 23.501390 seconds.
-  path: Assets/Level Tiles/floor tiles-Sheet.png
-  artifactKey: Guid(a064795d1f9562f479a25fb3ecd9f12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/floor tiles-Sheet.png using Guid(a064795d1f9562f479a25fb3ecd9f12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a799d8d1cc57891370cd4e6dcf0a2fb5') in 0.031670 seconds 
-  Import took 0.035598 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 47.441961 seconds.
-  path: Assets/Level Tiles/Tile Floor 2.prefab
-  artifactKey: Guid(545f6a812d848cd4c89bc6040b23e206) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Tile Floor 2.prefab using Guid(545f6a812d848cd4c89bc6040b23e206) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '860b0aff346e0e55dd00e4afea791bf9') in 0.015234 seconds 
-  Import took 0.019157 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 38.964224 seconds.
-  path: Assets/Level Tiles/floor tiles-Sheet_0.asset
-  artifactKey: Guid(a4b9483e4b03a5a43ab4b99fe5b05b21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/floor tiles-Sheet_0.asset using Guid(a4b9483e4b03a5a43ab4b99fe5b05b21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '127f649771c7915da9f162e3c293ec73') in 0.015195 seconds 
-  Import took 0.019313 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000191 seconds.
-  path: Assets/Level Tiles/Tile Floor 2.prefab
-  artifactKey: Guid(545f6a812d848cd4c89bc6040b23e206) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Tile Floor 2.prefab using Guid(545f6a812d848cd4c89bc6040b23e206) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e7f5c7478a23b7774d81f0d492dd43e') in 0.023357 seconds 
-  Import took 0.027942 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 35.311450 seconds.
-  path: Assets/Level Tiles/floor tiles-Sheet.png
-  artifactKey: Guid(a064795d1f9562f479a25fb3ecd9f12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/floor tiles-Sheet.png using Guid(a064795d1f9562f479a25fb3ecd9f12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1601dc0c2d92a0e9212723985b287bb') in 0.037422 seconds 
-  Import took 0.040633 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 16.729134 seconds.
-  path: Assets/Level Tiles/floor tiles-Sheet.png
-  artifactKey: Guid(a064795d1f9562f479a25fb3ecd9f12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/floor tiles-Sheet.png using Guid(a064795d1f9562f479a25fb3ecd9f12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03d411ff68c510e440856df7419dd2dc') in 0.030757 seconds 
-  Import took 0.034006 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.810134 seconds.
-  path: Assets/Level Tiles/floor tiles-Sheet.png
-  artifactKey: Guid(a064795d1f9562f479a25fb3ecd9f12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/floor tiles-Sheet.png using Guid(a064795d1f9562f479a25fb3ecd9f12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92c96db59e754b49303072273e36d7c0') in 0.031951 seconds 
-  Import took 0.035233 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.930185 seconds.
-  path: Assets/Level Tiles/floor tiles-Sheet_1.asset
-  artifactKey: Guid(865bc8c0e5845cf4eaed840a01907706) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/floor tiles-Sheet_1.asset using Guid(865bc8c0e5845cf4eaed840a01907706) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e070ec079bb8f8a14405a705d8a17e1b') in 0.017068 seconds 
-  Import took 0.022802 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000425 seconds.
-  path: Assets/Level Tiles/Tile Floor 2.prefab
-  artifactKey: Guid(545f6a812d848cd4c89bc6040b23e206) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Tile Floor 2.prefab using Guid(545f6a812d848cd4c89bc6040b23e206) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c90aae0db48ef9f1a1aa18a0cd0e5f20') in 0.014830 seconds 
-  Import took 0.019796 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.131842 seconds.
-  path: Assets/Level Tiles/floor tiles-Sheet.png
-  artifactKey: Guid(a064795d1f9562f479a25fb3ecd9f12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/floor tiles-Sheet.png using Guid(a064795d1f9562f479a25fb3ecd9f12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae896c770715740fb8e26e067e8899ae') in 0.033856 seconds 
-  Import took 0.037233 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.364934 seconds.
-  path: Assets/Level Tiles/floor tiles-Sheet_2.asset
-  artifactKey: Guid(e7792c03b8755424abbb99ca74983bea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/floor tiles-Sheet_2.asset using Guid(e7792c03b8755424abbb99ca74983bea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc968a2275a3976396c08af5bd7aaf21') in 0.014332 seconds 
-  Import took 0.018809 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000251 seconds.
-  path: Assets/Level Tiles/Tile Floor 2.prefab
-  artifactKey: Guid(545f6a812d848cd4c89bc6040b23e206) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Tile Floor 2.prefab using Guid(545f6a812d848cd4c89bc6040b23e206) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3d933a0bba593bd41905ce51807e79c') in 0.015692 seconds 
-  Import took 0.020214 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.689925 seconds.
-  path: Assets/Level Tiles/floor tiles-Sheet_3.asset
-  artifactKey: Guid(8b9278785a38cba4fab928c2a5c5e63e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/floor tiles-Sheet_3.asset using Guid(8b9278785a38cba4fab928c2a5c5e63e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a5541ab7e52dcc6907f19e24def7cd8') in 0.012095 seconds 
-  Import took 0.016910 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000241 seconds.
-  path: Assets/Level Tiles/Tile Floor 2.prefab
-  artifactKey: Guid(545f6a812d848cd4c89bc6040b23e206) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Tile Floor 2.prefab using Guid(545f6a812d848cd4c89bc6040b23e206) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '692a20a0519dda917e9297022542f37a') in 0.013441 seconds 
-  Import took 0.018058 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.424576 seconds.
-  path: Assets/Level Tiles/floor tiles-Sheet_4.asset
-  artifactKey: Guid(a8cd812d753318249a4f4f798b887700) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/floor tiles-Sheet_4.asset using Guid(a8cd812d753318249a4f4f798b887700) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d7fd9ef4897398dad412f0b05374944') in 0.015789 seconds 
-  Import took 0.020501 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000178 seconds.
-  path: Assets/Level Tiles/Tile Floor 2.prefab
-  artifactKey: Guid(545f6a812d848cd4c89bc6040b23e206) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Tile Floor 2.prefab using Guid(545f6a812d848cd4c89bc6040b23e206) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e7f6f636fa10681a03090f285539775') in 0.012010 seconds 
-  Import took 0.016492 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.818571 seconds.
-  path: Assets/Level Tiles/floor tiles-Sheet_5.asset
-  artifactKey: Guid(7c0caae7ffe392441a827f6112a64c0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/floor tiles-Sheet_5.asset using Guid(7c0caae7ffe392441a827f6112a64c0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c71461a76b5e7e81e95e352029d4504') in 0.011210 seconds 
-  Import took 0.014820 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000172 seconds.
-  path: Assets/Level Tiles/Tile Floor 2.prefab
-  artifactKey: Guid(545f6a812d848cd4c89bc6040b23e206) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Tile Floor 2.prefab using Guid(545f6a812d848cd4c89bc6040b23e206) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4132d2599c1d972f42d3ca2da5b7f54') in 0.011132 seconds 
-  Import took 0.014734 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 25.825876 seconds.
-  path: Assets/Level Tiles/roof tile 1.asset
-  artifactKey: Guid(c063980a314ec5e4cb102cc0a0042840) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/roof tile 1.asset using Guid(c063980a314ec5e4cb102cc0a0042840) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e57fca8db7a6373fddd2914030dab9a7') in 0.014679 seconds 
-  Import took 0.020170 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000250 seconds.
-  path: Assets/Level Tiles/Tile Floor 2.prefab
-  artifactKey: Guid(545f6a812d848cd4c89bc6040b23e206) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Tile Floor 2.prefab using Guid(545f6a812d848cd4c89bc6040b23e206) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf0790dee60f35a7a40e681e287d249f') in 0.016702 seconds 
-  Import took 0.020549 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 129.881670 seconds.
-  path: Assets/Level Tiles/floor tiles-Sheet.png
-  artifactKey: Guid(a064795d1f9562f479a25fb3ecd9f12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/floor tiles-Sheet.png using Guid(a064795d1f9562f479a25fb3ecd9f12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c1855f81781c91518f5f712a5f036f2') in 0.026774 seconds 
-  Import took 0.030460 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.709130 seconds.
-  path: Assets/Level Tiles/floor tiles-Sheet.png
-  artifactKey: Guid(a064795d1f9562f479a25fb3ecd9f12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/floor tiles-Sheet.png using Guid(a064795d1f9562f479a25fb3ecd9f12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53c476679e9bddda42da16f06b5c38f4') in 0.017842 seconds 
-  Import took 0.021504 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 47.491207 seconds.
-  path: Assets/Level Tiles/floor tiles-Sheet.png
-  artifactKey: Guid(a064795d1f9562f479a25fb3ecd9f12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/floor tiles-Sheet.png using Guid(a064795d1f9562f479a25fb3ecd9f12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d1c3994890fd54f215065f7bfeac960') in 0.026795 seconds 
-  Import took 0.030189 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.988046 seconds.
-  path: Assets/Level Tiles/floor tiles-Sheet.png
-  artifactKey: Guid(a064795d1f9562f479a25fb3ecd9f12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/floor tiles-Sheet.png using Guid(a064795d1f9562f479a25fb3ecd9f12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b69cb1e547fd4ca181ed5755f79fa0cb') in 0.029213 seconds 
-  Import took 0.032500 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 49.022302 seconds.
-  path: Assets/Level Tiles/floor tiles-Sheet.png
-  artifactKey: Guid(a064795d1f9562f479a25fb3ecd9f12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/floor tiles-Sheet.png using Guid(a064795d1f9562f479a25fb3ecd9f12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '005f29fd0f1edac9803b02cadb548a5c') in 0.029779 seconds 
-  Import took 0.032758 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 112.804563 seconds.
-  path: Assets/Level Tiles/floor tiles-Sheet.png
-  artifactKey: Guid(a064795d1f9562f479a25fb3ecd9f12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/floor tiles-Sheet.png using Guid(a064795d1f9562f479a25fb3ecd9f12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9aa875555c9900b7dbd41928e288491') in 0.030800 seconds 
-  Import took 0.034013 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 21.079571 seconds.
-  path: Assets/Level Tiles/floor tiles-Sheet.png
-  artifactKey: Guid(a064795d1f9562f479a25fb3ecd9f12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/floor tiles-Sheet.png using Guid(a064795d1f9562f479a25fb3ecd9f12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f77326b2c632db9dd5893295a6133a3') in 0.035414 seconds 
-  Import took 0.038836 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.578760 seconds.
-  path: Assets/Level Tiles/floor tiles-Sheet.png
-  artifactKey: Guid(a064795d1f9562f479a25fb3ecd9f12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/floor tiles-Sheet.png using Guid(a064795d1f9562f479a25fb3ecd9f12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3bb49e60cd9aa506fbe77b740ea4044') in 0.030318 seconds 
-  Import took 0.033649 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.169786 seconds.
-  path: Assets/Level Tiles/floor tiles-Sheet.png
-  artifactKey: Guid(a064795d1f9562f479a25fb3ecd9f12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/floor tiles-Sheet.png using Guid(a064795d1f9562f479a25fb3ecd9f12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd85b238a80ebdaac031fa9a58886803e') in 0.031332 seconds 
-  Import took 0.034458 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 32.606864 seconds.
-  path: Assets/Level Tiles/floor tiles-Sheet.png
-  artifactKey: Guid(a064795d1f9562f479a25fb3ecd9f12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/floor tiles-Sheet.png using Guid(a064795d1f9562f479a25fb3ecd9f12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a0f7821b863dc932fc1a657644643f4') in 0.033021 seconds 
-  Import took 0.036368 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 65.714029 seconds.
-  path: Assets/Level Tiles/floor tiles-Sheet.png
-  artifactKey: Guid(a064795d1f9562f479a25fb3ecd9f12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/floor tiles-Sheet.png using Guid(a064795d1f9562f479a25fb3ecd9f12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a214aa91215b31106e27769f00984d0b') in 0.031091 seconds 
-  Import took 0.034482 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 162.074448 seconds.
-  path: Assets/Level Tiles/roof tiles top 1 n 2.png
-  artifactKey: Guid(fa06e92504495b44d8383a72990fe7bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/roof tiles top 1 n 2.png using Guid(fa06e92504495b44d8383a72990fe7bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d8a851b52bbc00cbe87d204b28643a7') in 0.014596 seconds 
-  Import took 0.018774 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 16.266673 seconds.
-  path: Assets/Level Tiles/roof tiles top 1 n 2.png
-  artifactKey: Guid(fa06e92504495b44d8383a72990fe7bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/roof tiles top 1 n 2.png using Guid(fa06e92504495b44d8383a72990fe7bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0cf24024c2a16c822159dc1fc5d3027') in 0.007300 seconds 
-  Import took 0.010950 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 13.844079 seconds.
-  path: Assets/Level Tiles/roof tiles top 1 n 2.png
-  artifactKey: Guid(fa06e92504495b44d8383a72990fe7bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/roof tiles top 1 n 2.png using Guid(fa06e92504495b44d8383a72990fe7bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a10daa2a353f4de3f393732b883acd41') in 0.028698 seconds 
-  Import took 0.031992 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 28.277509 seconds.
+  Time since last request: 93.888725 seconds.
   path: Assets/Level Tiles/Floor pallette.prefab
   artifactKey: Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Floor pallette.prefab using Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70d8865f4f0e7070281458ff3068afdb') in 0.014767 seconds 
-  Import took 0.019116 seconds .
+Start importing Assets/Level Tiles/Floor pallette.prefab using Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed132204d80c6784d5db2b3f90050595') in 0.048542 seconds 
+  Import took 0.053699 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 4.004617 seconds.
+  Time since last request: 19.133219 seconds.
   path: Assets/Level Tiles/Floor pallette.prefab
   artifactKey: Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Floor pallette.prefab using Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69a679ae14d6231e0448c1a4da5af7e6') in 0.012526 seconds 
-  Import took 0.016358 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.820778 seconds.
-  path: Assets/Level Tiles/Floor pallette.prefab
-  artifactKey: Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Floor pallette.prefab using Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '182465ad2d7e4fa36a7820111c0a6d13') in 0.012596 seconds 
-  Import took 0.016027 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.843367 seconds.
-  path: Assets/Level Tiles/Floor pallette.prefab
-  artifactKey: Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Floor pallette.prefab using Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '108ef1f405c26eff51700c83f793a4ab') in 0.013887 seconds 
-  Import took 0.018988 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.285368 seconds.
-  path: Assets/Level Tiles/Floor pallette.prefab
-  artifactKey: Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Floor pallette.prefab using Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfd2b9f1a68ca49e0d10d217125723bf') in 0.010420 seconds 
-  Import took 0.014651 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.276676 seconds.
-  path: Assets/Level Tiles/Floor pallette.prefab
-  artifactKey: Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Floor pallette.prefab using Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cdd6393bd67e91450f81a7ac8a6d395c') in 0.010865 seconds 
-  Import took 0.015116 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.818565 seconds.
-  path: Assets/Level Tiles/Floor pallette.prefab
-  artifactKey: Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Floor pallette.prefab using Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd12a5cfe4a16db04c7738a113387fe6') in 0.011736 seconds 
-  Import took 0.016907 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.353759 seconds.
-  path: Assets/Level Tiles/Floor pallette.prefab
-  artifactKey: Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Floor pallette.prefab using Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2885694b46ce17866db7d0be233d89e8') in 0.017113 seconds 
-  Import took 0.021498 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000165 seconds.
-  path: Assets/Level Tiles/roof tiles.asset
-  artifactKey: Guid(4d5783b047c3b1e42849c97b5eb4b745) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/roof tiles.asset using Guid(4d5783b047c3b1e42849c97b5eb4b745) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '377132e0b31b39cae2bc5ece07fd7cee') in 0.010372 seconds 
-  Import took 0.013747 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 21.777319 seconds.
-  path: Assets/Level Tiles/roof tiles top 1 n 2.png
-  artifactKey: Guid(fa06e92504495b44d8383a72990fe7bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/roof tiles top 1 n 2.png using Guid(fa06e92504495b44d8383a72990fe7bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '178dc308a7d1d4f1190c014601c0d340') in 0.027880 seconds 
-  Import took 0.031036 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 102.727277 seconds.
-  path: Assets/Level Tiles/empty floor tiles.png
-  artifactKey: Guid(6187bb344bc8a224d834c38ea95abd46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/empty floor tiles.png using Guid(6187bb344bc8a224d834c38ea95abd46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22e6cce05c46ed96c6ca2da61a615d06') in 0.015545 seconds 
-  Import took 0.019153 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.545091 seconds.
-  path: Assets/Level Tiles/empty floor tiles.png
-  artifactKey: Guid(6187bb344bc8a224d834c38ea95abd46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/empty floor tiles.png using Guid(6187bb344bc8a224d834c38ea95abd46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed0ea1e3884af66e9f5683b75a9d185b') in 0.009770 seconds 
-  Import took 0.013366 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 18.082964 seconds.
-  path: Assets/Level Tiles/empty floor tiles.png
-  artifactKey: Guid(6187bb344bc8a224d834c38ea95abd46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/empty floor tiles.png using Guid(6187bb344bc8a224d834c38ea95abd46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a700fbce845ddb739a83bb23614bd8a') in 0.028363 seconds 
-  Import took 0.031554 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 18.074592 seconds.
-  path: Assets/Level Tiles/empty floor tiles.png
-  artifactKey: Guid(6187bb344bc8a224d834c38ea95abd46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/empty floor tiles.png using Guid(6187bb344bc8a224d834c38ea95abd46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f62fff823cf1e5a8ff2ddff1b6fc079') in 0.030578 seconds 
-  Import took 0.033638 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.228221 seconds.
-  path: Assets/Level Tiles/empty floor tiles_0.asset
-  artifactKey: Guid(61cdc8f9abb0f134093232be85ff5623) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/empty floor tiles_0.asset using Guid(61cdc8f9abb0f134093232be85ff5623) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bf18a4fc682d971a6c6fa5f7778e964') in 0.012202 seconds 
-  Import took 0.016179 seconds .
+Start importing Assets/Level Tiles/Floor pallette.prefab using Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ecce989e78b24011fc14d08ed69df6a8') in 0.021473 seconds 
+  Import took 0.027972 seconds .
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000167 seconds.
+  path: Assets/Level Tiles/take 2 1.asset
+  artifactKey: Guid(19b74d25d8cd75f43845e24dfe4b772e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level Tiles/take 2 1.asset using Guid(19b74d25d8cd75f43845e24dfe4b772e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4cb7a3fdafb93744aa0e53a6057170a8') in 0.023485 seconds 
+  Import took 0.028827 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.025604 seconds.
   path: Assets/Level Tiles/Floor pallette.prefab
   artifactKey: Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Floor pallette.prefab using Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2396a9d4bee169af3e6d6976ac3c9d8d') in 0.014151 seconds 
-  Import took 0.017408 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.499593 seconds.
-  path: Assets/Level Tiles/empty floor tiles_1.asset
-  artifactKey: Guid(cc8cf8b79d1b8254eb893c8487999f86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/empty floor tiles_1.asset using Guid(cc8cf8b79d1b8254eb893c8487999f86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0428a38d27e8fb822ecdd33cf4c92a8') in 0.014078 seconds 
-  Import took 0.018779 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000205 seconds.
-  path: Assets/Level Tiles/Floor pallette.prefab
-  artifactKey: Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Floor pallette.prefab using Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24173f768099762b7ab4e55cf0f89f3f') in 0.014695 seconds 
-  Import took 0.017976 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.448490 seconds.
-  path: Assets/Level Tiles/empty floor tiles_2.asset
-  artifactKey: Guid(e49d917e9047f98498b94d4a7febd658) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/empty floor tiles_2.asset using Guid(e49d917e9047f98498b94d4a7febd658) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70aa20fc934937cceadf08c4c5317382') in 0.010996 seconds 
-  Import took 0.015109 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000186 seconds.
-  path: Assets/Level Tiles/Floor pallette.prefab
-  artifactKey: Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Floor pallette.prefab using Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b85f6b170553fabcb19c69f5e6c6869') in 0.013483 seconds 
-  Import took 0.017182 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.933599 seconds.
-  path: Assets/Level Tiles/empty floor tiles_3.asset
-  artifactKey: Guid(6b339938d345a35429ce5e67e9f1bf78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/empty floor tiles_3.asset using Guid(6b339938d345a35429ce5e67e9f1bf78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '666c6c5fed636354cf05d854afbb856d') in 0.014557 seconds 
-  Import took 0.019327 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000181 seconds.
-  path: Assets/Level Tiles/Floor pallette.prefab
-  artifactKey: Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Floor pallette.prefab using Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ab645bcc5d47abad35a4631efc5263d') in 0.013574 seconds 
-  Import took 0.017730 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.994524 seconds.
-  path: Assets/Level Tiles/empty floor tiles_4.asset
-  artifactKey: Guid(c2eac6146ec49c34ea2b90630ebfec6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/empty floor tiles_4.asset using Guid(c2eac6146ec49c34ea2b90630ebfec6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5e6a7592b25b919ca9a305f7419c236') in 0.012984 seconds 
-  Import took 0.017977 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000195 seconds.
-  path: Assets/Level Tiles/Floor pallette.prefab
-  artifactKey: Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Floor pallette.prefab using Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3927df2e4a2675d70bf8f8bc000ee79a') in 0.017310 seconds 
-  Import took 0.022335 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.999631 seconds.
-  path: Assets/Level Tiles/empty floor tiles_5.asset
-  artifactKey: Guid(f6b25d91e9b4889459618086c1180249) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/empty floor tiles_5.asset using Guid(f6b25d91e9b4889459618086c1180249) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e67d6729b4475a1a6e5f4353ca0a56e5') in 0.012657 seconds 
-  Import took 0.017212 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000193 seconds.
-  path: Assets/Level Tiles/Floor pallette.prefab
-  artifactKey: Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Floor pallette.prefab using Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '678d1f58677a798d33733aeb4958ad97') in 0.015088 seconds 
-  Import took 0.018545 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 441.468063 seconds.
-  path: Assets/Level Tiles/floor tiles-Sheet.png
-  artifactKey: Guid(a064795d1f9562f479a25fb3ecd9f12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/floor tiles-Sheet.png using Guid(a064795d1f9562f479a25fb3ecd9f12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '903f53593c52fe2ddb909240e5c0b1b9') in 0.027815 seconds 
-  Import took 0.032324 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 198.610504 seconds.
-  path: Assets/Level Tiles/Floor pallette.prefab
-  artifactKey: Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Floor pallette.prefab using Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cdd67a19f4ba9d07487bf9fc0dc2a73e') in 0.018132 seconds 
-  Import took 0.022067 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 427.063740 seconds.
-  path: Assets/Level Tiles/empty floor tiles.png
-  artifactKey: Guid(6187bb344bc8a224d834c38ea95abd46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/empty floor tiles.png using Guid(6187bb344bc8a224d834c38ea95abd46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02ab0e87eaba35c881d2f86792f5869e') in 0.036959 seconds 
-  Import took 0.042000 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1081.629489 seconds.
-  path: ProjectSettings/TagManager.asset
-  artifactKey: Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing ProjectSettings/TagManager.asset using Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95df672b4aaba54310d34c83eef51bb8') in 0.009264 seconds 
-  Import took 0.013623 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 536.918601 seconds.
-  path: Assets/Level Tiles/floor tiles-Sheet.png
-  artifactKey: Guid(a064795d1f9562f479a25fb3ecd9f12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/floor tiles-Sheet.png using Guid(a064795d1f9562f479a25fb3ecd9f12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e0cae46fdc6477f8df004b2c07f54d0') in 0.035833 seconds 
-  Import took 0.039979 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 474.306348 seconds.
-  path: Assets/Level Tiles/Floor pallette.prefab
-  artifactKey: Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Floor pallette.prefab using Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67f95fdc13b261811ad3930fdb3457a8') in 0.017637 seconds 
-  Import took 0.021615 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000199 seconds.
-  path: Assets/Level Tiles/floor tiles-Sheet.png
-  artifactKey: Guid(a064795d1f9562f479a25fb3ecd9f12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/floor tiles-Sheet.png using Guid(a064795d1f9562f479a25fb3ecd9f12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5138227d6677109293149977889baed3') in 0.023439 seconds 
-  Import took 0.027099 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 578.304550 seconds.
-  path: Assets/Level Tiles/floor tiles-Sheet 1.png
-  artifactKey: Guid(28e6cc7edaf56394fa1acb323770a28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/floor tiles-Sheet 1.png using Guid(28e6cc7edaf56394fa1acb323770a28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0414aec232eb3de3132a461803cc57b') in 0.015359 seconds 
-  Import took 0.020044 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 31.695238 seconds.
-  path: Assets/Level Tiles/floor tiles-Sheet 1.png
-  artifactKey: Guid(28e6cc7edaf56394fa1acb323770a28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/floor tiles-Sheet 1.png using Guid(28e6cc7edaf56394fa1acb323770a28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35f3f58b380912632d45c8528de81fcd') in 0.010211 seconds 
-  Import took 0.014113 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 157.577459 seconds.
-  path: Assets/Level Tiles/floor tiles-Sheet 1.png
-  artifactKey: Guid(28e6cc7edaf56394fa1acb323770a28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/floor tiles-Sheet 1.png using Guid(28e6cc7edaf56394fa1acb323770a28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72259071ff06f42a995115b316a36052') in 0.035459 seconds 
-  Import took 0.038521 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 85.147752 seconds.
-  path: Assets/Level Tiles/Floor pallette.prefab
-  artifactKey: Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Floor pallette.prefab using Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd99296163daf51bb2f2b6fa5e06aef3f') in 0.024901 seconds 
-  Import took 0.029843 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000189 seconds.
-  path: Assets/Level Tiles/NEW FLOOR.asset
-  artifactKey: Guid(ef91bf547ecb4d64ab1f754d3683cfd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/NEW FLOOR.asset using Guid(ef91bf547ecb4d64ab1f754d3683cfd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c2532a5c88e2c158e2e9d6d23781872') in 0.010996 seconds 
-  Import took 0.014990 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 14.627536 seconds.
-  path: Assets/Level Tiles/Floor pallette.prefab
-  artifactKey: Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Floor pallette.prefab using Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab43591b70f28b0222539f26ea2e81b4') in 0.022050 seconds 
-  Import took 0.026559 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000159 seconds.
-  path: Assets/Level Tiles/NEW FLOOR 2.asset
-  artifactKey: Guid(7136f725c32c976438d1871fc9e19708) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/NEW FLOOR 2.asset using Guid(7136f725c32c976438d1871fc9e19708) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99691a363d82add05a0e55a61854e03d') in 0.010379 seconds 
-  Import took 0.014011 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 17.781077 seconds.
-  path: Assets/Level Tiles/Floor pallette.prefab
-  artifactKey: Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Floor pallette.prefab using Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02cd14a3d01bd8d57ef7ca15447d13e9') in 0.019733 seconds 
-  Import took 0.024269 seconds .
+Start importing Assets/Level Tiles/Floor pallette.prefab using Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1686b4cfe9445d72104bea1709f3e6c6') in 0.010721 seconds 
+  Import took 0.015894 seconds .
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000252 seconds.
-  path: Assets/Level Tiles/NEW FLOOR 3.asset
-  artifactKey: Guid(9f8fad6a09575fb488c9f118f44cfac2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/NEW FLOOR 3.asset using Guid(9f8fad6a09575fb488c9f118f44cfac2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50f3862c51ece3b54fa7f90c53ab939f') in 0.011588 seconds 
-  Import took 0.015815 seconds .
+  path: Assets/Level Tiles/take 2 2.asset
+  artifactKey: Guid(ba08208d9a40b264aab1705a0bf8be91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level Tiles/take 2 2.asset using Guid(ba08208d9a40b264aab1705a0bf8be91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f2df742782fab2ab3cdd95bd3f8f052') in 0.010386 seconds 
+  Import took 0.016400 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 14.337625 seconds.
+  Time since last request: 10.252445 seconds.
   path: Assets/Level Tiles/Floor pallette.prefab
   artifactKey: Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Floor pallette.prefab using Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1762c245339740432e36da0da0e3a98d') in 0.019052 seconds 
-  Import took 0.023175 seconds .
+Start importing Assets/Level Tiles/Floor pallette.prefab using Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5692479c4795431aaf10ecbcf0182c4') in 0.010530 seconds 
+  Import took 0.015983 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000231 seconds.
+  path: Assets/Level Tiles/take 2 3.asset
+  artifactKey: Guid(f94566440d7d87d4c90562141d0bbaa8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level Tiles/take 2 3.asset using Guid(f94566440d7d87d4c90562141d0bbaa8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ad87ddf5c57951ca0b0f90a08904df4') in 0.010231 seconds 
+  Import took 0.016252 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.510818 seconds.
+  path: Assets/Level Tiles/Floor pallette.prefab
+  artifactKey: Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level Tiles/Floor pallette.prefab using Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a222f669666ae0cd0d50b136609b72c') in 0.009454 seconds 
+  Import took 0.014455 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/Level Tiles/take 2 4.asset
+  artifactKey: Guid(ffbcae05d84e7394d8308a3ac0f857ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level Tiles/take 2 4.asset using Guid(ffbcae05d84e7394d8308a3ac0f857ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54d1c1256b3619720dc6321761cb67c5') in 0.011454 seconds 
+  Import took 0.016722 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.582609 seconds.
+  path: Assets/Level Tiles/Floor pallette.prefab
+  artifactKey: Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level Tiles/Floor pallette.prefab using Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eea0deb3d751a31cf0921655791633b0') in 0.010922 seconds 
+  Import took 0.016512 seconds .
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000163 seconds.
-  path: Assets/Level Tiles/NEW FLOOR 4.asset
-  artifactKey: Guid(2e1b7be2b42e7874f8bf6ef958d304ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/NEW FLOOR 4.asset using Guid(2e1b7be2b42e7874f8bf6ef958d304ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1555d27918d0c759fd43944a53b1b9ba') in 0.011064 seconds 
-  Import took 0.014195 seconds .
+  path: Assets/Level Tiles/take 2 5.asset
+  artifactKey: Guid(a08fbf7c5f3c810438f4b340dff6708e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level Tiles/take 2 5.asset using Guid(a08fbf7c5f3c810438f4b340dff6708e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e86a013b960ed11baa51a38401161995') in 0.010788 seconds 
+  Import took 0.016961 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 46.015867 seconds.
-  path: Assets/Level Tiles/floor tiles-Sheet.png
-  artifactKey: Guid(a064795d1f9562f479a25fb3ecd9f12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/floor tiles-Sheet.png using Guid(a064795d1f9562f479a25fb3ecd9f12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0fb10b64b2cb6ffc7e741653a0a026e') in 0.031516 seconds 
-  Import took 0.035275 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 23.105128 seconds.
+  Time since last request: 6.583706 seconds.
   path: Assets/Level Tiles/Floor pallette.prefab
   artifactKey: Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Floor pallette.prefab using Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba975312c009042ddd1aa4f96032ee9d') in 0.023226 seconds 
-  Import took 0.028476 seconds .
+Start importing Assets/Level Tiles/Floor pallette.prefab using Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03b0357b5349e6b4409dde5e82610b21') in 0.011188 seconds 
+  Import took 0.016668 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000216 seconds.
-  path: Assets/Level Tiles/NEW FLOOR 5.asset
-  artifactKey: Guid(af8f728b159c43f4392999e99cf8ac11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/NEW FLOOR 5.asset using Guid(af8f728b159c43f4392999e99cf8ac11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93084e709b79fae75c2dead0c0652e09') in 0.010442 seconds 
-  Import took 0.013956 seconds .
+  Time since last request: 0.000245 seconds.
+  path: Assets/Level Tiles/take 2 6.asset
+  artifactKey: Guid(d46f4293b54615b418107e84ab35d0cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level Tiles/take 2 6.asset using Guid(d46f4293b54615b418107e84ab35d0cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75084cb51b28aa4280d78f789f48b4e2') in 0.010550 seconds 
+  Import took 0.015088 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 16.007362 seconds.
+  Time since last request: 8.511524 seconds.
   path: Assets/Level Tiles/Floor pallette.prefab
   artifactKey: Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Floor pallette.prefab using Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32ea9e7891adcf9bb49a61e7ddb3cf34') in 0.031224 seconds 
-  Import took 0.034685 seconds .
+Start importing Assets/Level Tiles/Floor pallette.prefab using Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '123a7e0550d41cea2e758f3e562dbf07') in 0.013725 seconds 
+  Import took 0.020190 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000393 seconds.
-  path: Assets/Level Tiles/NEW FLOOR 6.asset
-  artifactKey: Guid(2171f1cfb6b32ec4e937a679214378ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/NEW FLOOR 6.asset using Guid(2171f1cfb6b32ec4e937a679214378ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0562d4cbdd428119b044ad7fbfb81f13') in 0.012200 seconds 
-  Import took 0.016766 seconds .
+  Time since last request: 0.000220 seconds.
+  path: Assets/Level Tiles/take 2 7.asset
+  artifactKey: Guid(9a0c8f56bb4a6054fbeb42816ec48968) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level Tiles/take 2 7.asset using Guid(9a0c8f56bb4a6054fbeb42816ec48968) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33f1cdfdcd3496ddc5b92b3417fdb366') in 0.010813 seconds 
+  Import took 0.016178 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 29.848452 seconds.
+  Time since last request: 8.712648 seconds.
   path: Assets/Level Tiles/Floor pallette.prefab
   artifactKey: Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Floor pallette.prefab using Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62bffc4bc96020d09b0e335c907225bb') in 0.023593 seconds 
-  Import took 0.027650 seconds .
+Start importing Assets/Level Tiles/Floor pallette.prefab using Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '535b568adf0e8a9ee3658c2c5ea2e0d6') in 0.011930 seconds 
+  Import took 0.016023 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 25.818954 seconds.
-  path: Assets/Level Tiles/Floor pallette.prefab
-  artifactKey: Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Floor pallette.prefab using Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b08f1354a3ec939251cee3b14345d86a') in 0.020127 seconds 
-  Import took 0.025149 seconds .
+  Time since last request: 0.000198 seconds.
+  path: Assets/Level Tiles/take 2 8.asset
+  artifactKey: Guid(9173672ae91bb7f429d7899ac3c0c41e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level Tiles/take 2 8.asset using Guid(9173672ae91bb7f429d7899ac3c0c41e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3fa209b2b19cf49dc176a3f5a8eb6af') in 0.010365 seconds 
+  Import took 0.013635 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 20.154457 seconds.
-  path: Assets/Level Tiles/floor tiles-Sheet 1.png
-  artifactKey: Guid(28e6cc7edaf56394fa1acb323770a28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/floor tiles-Sheet 1.png using Guid(28e6cc7edaf56394fa1acb323770a28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94487c86fb530dad43663113561706a8') in 0.037375 seconds 
-  Import took 0.040651 seconds .
+  Time since last request: 5296.372992 seconds.
+  path: Assets/Level Tiles/health bar color accurate.png
+  artifactKey: Guid(c363efd9993613c43ba91f8983849b2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level Tiles/health bar color accurate.png using Guid(c363efd9993613c43ba91f8983849b2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '260523ff2f887c43ed9d95899c822b41') in 0.028395 seconds 
+  Import took 0.034464 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000165 seconds.
-  path: Assets/Level Tiles/NEW FLOOR.asset
-  artifactKey: Guid(ef91bf547ecb4d64ab1f754d3683cfd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/NEW FLOOR.asset using Guid(ef91bf547ecb4d64ab1f754d3683cfd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '156013a137a8360bd6507bdf18d6e07a') in 0.010016 seconds 
-  Import took 0.013012 seconds .
+  Time since last request: 0.000282 seconds.
+  path: Assets/Level Tiles/Moving platform actual.png
+  artifactKey: Guid(20daacf5fb939e54783713f9be1e5675) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level Tiles/Moving platform actual.png using Guid(20daacf5fb939e54783713f9be1e5675) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99ce38e6d8df557c955d4a638c02a4f7') in 0.016528 seconds 
+  Import took 0.021557 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 13.905741 seconds.
-  path: Assets/Level Tiles/Floor pallette.prefab
-  artifactKey: Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Floor pallette.prefab using Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '792735ba2fc29e0765da25485be2718a') in 0.022640 seconds 
-  Import took 0.026310 seconds .
+  Time since last request: 0.000198 seconds.
+  path: Assets/Level Tiles/health bar outline accurate.png
+  artifactKey: Guid(30008de9701e30a408fe8d0f3279f599) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level Tiles/health bar outline accurate.png using Guid(30008de9701e30a408fe8d0f3279f599) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5f22440a2ef3ecde475af1a0d2dcb1b') in 0.015607 seconds 
+  Import took 0.021337 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 18.529971 seconds.
-  path: Assets/Level Tiles/Floor pallette.prefab
-  artifactKey: Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Floor pallette.prefab using Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcd426ab85abd64fcfb34698b8889731') in 0.014532 seconds 
-  Import took 0.018821 seconds .
+  Time since last request: 60.298280 seconds.
+  path: Assets/Level Tiles/ladder tile accurate.png
+  artifactKey: Guid(24e0e30e6af67264c9386c4b7e5cdd62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level Tiles/ladder tile accurate.png using Guid(24e0e30e6af67264c9386c4b7e5cdd62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9c79fc5b6326da988a4c514aaed312d') in 0.017397 seconds 
+  Import took 0.023127 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 10.220926 seconds.
-  path: Assets/Level Tiles/Floor pallette.prefab
-  artifactKey: Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Floor pallette.prefab using Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84f794b52d9a8c84ecd6ebdc9b966e85') in 0.020416 seconds 
-  Import took 0.024386 seconds .
+  Time since last request: 592.852822 seconds.
+  path: Assets/Level Tiles/ladder tile accurate.png
+  artifactKey: Guid(24e0e30e6af67264c9386c4b7e5cdd62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level Tiles/ladder tile accurate.png using Guid(24e0e30e6af67264c9386c4b7e5cdd62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f521458691a58ee83f1d36378630ee8a') in 0.019672 seconds 
+  Import took 0.025029 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 9.675721 seconds.
-  path: Assets/Level Tiles/Floor pallette.prefab
-  artifactKey: Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Floor pallette.prefab using Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5e7c4c1b4c318de52d811d71e184c25') in 0.019484 seconds 
-  Import took 0.023390 seconds .
+  Time since last request: 84.493183 seconds.
+  path: Assets/Level Tiles/Level Tiles.prefab
+  artifactKey: Guid(e8493af920f673e4395b1d650a2acc1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level Tiles/Level Tiles.prefab using Guid(e8493af920f673e4395b1d650a2acc1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a184d3a269dea9744acb948d2c95283') in 0.014985 seconds 
+  Import took 0.020141 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 12.134513 seconds.
-  path: Assets/Level Tiles/Floor pallette.prefab
-  artifactKey: Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Floor pallette.prefab using Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '163cac2a5ceb841af30521228f916096') in 0.019970 seconds 
-  Import took 0.023811 seconds .
+  Time since last request: 12.152200 seconds.
+  path: Assets/Level Tiles/Level Tiles.prefab
+  artifactKey: Guid(e8493af920f673e4395b1d650a2acc1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level Tiles/Level Tiles.prefab using Guid(e8493af920f673e4395b1d650a2acc1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a585503f595ecb4d20c42cae8138ad2') in 0.018716 seconds 
+  Import took 0.023914 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 8.146590 seconds.
-  path: Assets/Level Tiles/Floor pallette.prefab
-  artifactKey: Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/Floor pallette.prefab using Guid(3807ed447e420f141a578b830e1e44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b836675f36a1d9759ba60965441e610') in 0.015960 seconds 
-  Import took 0.020108 seconds .
+  Time since last request: 10.834227 seconds.
+  path: Assets/Level Tiles/ladder tile accurate.asset
+  artifactKey: Guid(525ff59cd8feeb3439003f5882dfc140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level Tiles/ladder tile accurate.asset using Guid(525ff59cd8feeb3439003f5882dfc140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3994370a0c83e888ad35533f4911586') in 0.009950 seconds 
+  Import took 0.015104 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 111.401667 seconds.
-  path: Assets/Level Tiles/floor tiles-Sheet 1.png
-  artifactKey: Guid(28e6cc7edaf56394fa1acb323770a28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/floor tiles-Sheet 1.png using Guid(28e6cc7edaf56394fa1acb323770a28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aeae49425442d9a11424cfbec67baa13') in 0.035119 seconds 
-  Import took 0.038555 seconds .
+  Time since last request: 0.000206 seconds.
+  path: Assets/Level Tiles/Level Tiles.prefab
+  artifactKey: Guid(e8493af920f673e4395b1d650a2acc1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level Tiles/Level Tiles.prefab using Guid(e8493af920f673e4395b1d650a2acc1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'baae24ffac9419e4234519750387c7b2') in 0.013261 seconds 
+  Import took 0.018259 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008947 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.44 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.855 seconds
+Domain Reload Profiling:
+	ReloadAssembly (856ms)
+		BeginReloadAssembly (94ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (32ms)
+		EndReloadAssembly (710ms)
+			LoadAssemblies (72ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (258ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (36ms)
+			SetupLoadedEditorAssemblies (255ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (52ms)
+				ProcessInitializeOnLoadAttributes (184ms)
+				ProcessInitializeOnLoadMethodAttributes (9ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.42 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2186 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 98.3 MB.
+System memory in use after: 98.4 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2649.
+Total: 2.493500 ms (FindLiveObjects: 0.145300 ms CreateObjectMapping: 0.070900 ms MarkObjects: 2.262000 ms  DeleteObjects: 0.014600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1861.982093 seconds.
+  path: Assets/Level Tiles/rock platform tiles.png
+  artifactKey: Guid(c3d9336dd1c544c43a39981d4c540ab6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level Tiles/rock platform tiles.png using Guid(c3d9336dd1c544c43a39981d4c540ab6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa58dd42bf0237502c9314a0827f7d4d') in 0.050501 seconds 
+  Import took 0.057108 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000200 seconds.
-  path: Assets/Level Tiles/NEW FLOOR 6.asset
-  artifactKey: Guid(2171f1cfb6b32ec4e937a679214378ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/NEW FLOOR 6.asset using Guid(2171f1cfb6b32ec4e937a679214378ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7f2a448221a766b3a40ade53b37046c') in 0.009495 seconds 
-  Import took 0.012515 seconds .
+  Time since last request: 10.847770 seconds.
+  path: Assets/Level Tiles/rock platform tiles 1.png
+  artifactKey: Guid(b944062ab6a023c4fad510d0235181ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level Tiles/rock platform tiles 1.png using Guid(b944062ab6a023c4fad510d0235181ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '451def5e39026eaf7b42cf322a317249') in 0.014800 seconds 
+  Import took 0.020111 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000320 seconds.
-  path: Assets/Level Tiles/NEW FLOOR 3.asset
-  artifactKey: Guid(9f8fad6a09575fb488c9f118f44cfac2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/NEW FLOOR 3.asset using Guid(9f8fad6a09575fb488c9f118f44cfac2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '154f97b1238b321a9807385ad7d04d04') in 0.014729 seconds 
-  Import took 0.017986 seconds .
+  Time since last request: 26.145795 seconds.
+  path: Assets/Level Tiles/rock platform tiles.png
+  artifactKey: Guid(c3d9336dd1c544c43a39981d4c540ab6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level Tiles/rock platform tiles.png using Guid(c3d9336dd1c544c43a39981d4c540ab6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69280fac5072f2b5f11eeaebd6acfa49') in 0.009439 seconds 
+  Import took 0.015569 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000285 seconds.
-  path: Assets/Level Tiles/NEW FLOOR 5.asset
-  artifactKey: Guid(af8f728b159c43f4392999e99cf8ac11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/NEW FLOOR 5.asset using Guid(af8f728b159c43f4392999e99cf8ac11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41cc63192941a6fc0e1dd46859cf7928') in 0.011413 seconds 
-  Import took 0.015451 seconds .
+  Time since last request: 15.124927 seconds.
+  path: Assets/Level Tiles/rock platform tiles.png
+  artifactKey: Guid(c3d9336dd1c544c43a39981d4c540ab6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level Tiles/rock platform tiles.png using Guid(c3d9336dd1c544c43a39981d4c540ab6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '529b71e899826c78d3fd84e81f29af29') in 0.010058 seconds 
+  Import took 0.015506 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000185 seconds.
-  path: Assets/Level Tiles/NEW FLOOR 2.asset
-  artifactKey: Guid(7136f725c32c976438d1871fc9e19708) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/NEW FLOOR 2.asset using Guid(7136f725c32c976438d1871fc9e19708) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c809fca2042955959e66c71f27443a11') in 0.010973 seconds 
-  Import took 0.014729 seconds .
+  Time since last request: 23.223094 seconds.
+  path: Assets/Level Tiles/rock platform tiles.png
+  artifactKey: Guid(c3d9336dd1c544c43a39981d4c540ab6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level Tiles/rock platform tiles.png using Guid(c3d9336dd1c544c43a39981d4c540ab6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db1e46c3c0720cd751fb5e4db84b06f7') in 0.027729 seconds 
+  Import took 0.032453 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000217 seconds.
-  path: Assets/Level Tiles/NEW FLOOR 4.asset
-  artifactKey: Guid(2e1b7be2b42e7874f8bf6ef958d304ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/NEW FLOOR 4.asset using Guid(2e1b7be2b42e7874f8bf6ef958d304ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31616005a8097538e6c5f5fa96853ec8') in 0.022014 seconds 
-  Import took 0.025307 seconds .
+  Time since last request: 11.155196 seconds.
+  path: Assets/Level Tiles/Level Tiles.prefab
+  artifactKey: Guid(e8493af920f673e4395b1d650a2acc1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level Tiles/Level Tiles.prefab using Guid(e8493af920f673e4395b1d650a2acc1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc7c4f76d7fc22c5e9504031a1da0419') in 0.034668 seconds 
+  Import took 0.040379 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 6.013271 seconds.
-  path: Assets/Level Tiles/floor tiles-Sheet 1.png
-  artifactKey: Guid(28e6cc7edaf56394fa1acb323770a28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/floor tiles-Sheet 1.png using Guid(28e6cc7edaf56394fa1acb323770a28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bacafdda84d47653aa653ff8933342fa') in 0.035588 seconds 
-  Import took 0.038621 seconds .
+  Time since last request: 0.000194 seconds.
+  path: Assets/Level Tiles/rock platform tiles_0.asset
+  artifactKey: Guid(aa270e5235537514191bbec91b05b697) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level Tiles/rock platform tiles_0.asset using Guid(aa270e5235537514191bbec91b05b697) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f9ccc8f046175413507a0e33fc1fc82') in 0.025053 seconds 
+  Import took 0.031124 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 7.582674 seconds.
-  path: Assets/Level Tiles/floor tiles-Sheet 1.png
-  artifactKey: Guid(28e6cc7edaf56394fa1acb323770a28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/floor tiles-Sheet 1.png using Guid(28e6cc7edaf56394fa1acb323770a28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '093c5a60de1d9ff63fbbd43b1e0cb9ec') in 0.041783 seconds 
-  Import took 0.045556 seconds .
+  Time since last request: 4.150022 seconds.
+  path: Assets/Level Tiles/Level Tiles.prefab
+  artifactKey: Guid(e8493af920f673e4395b1d650a2acc1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level Tiles/Level Tiles.prefab using Guid(e8493af920f673e4395b1d650a2acc1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42074be798dff54c6d88af9a0ab9d2c5') in 0.013067 seconds 
+  Import took 0.019788 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 69.733761 seconds.
-  path: Assets/Level Tiles/floor tiles-Sheet 1.png
-  artifactKey: Guid(28e6cc7edaf56394fa1acb323770a28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/floor tiles-Sheet 1.png using Guid(28e6cc7edaf56394fa1acb323770a28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2605ca876c6d68434a1883752fe78859') in 0.037695 seconds 
-  Import took 0.041116 seconds .
+  Time since last request: 0.000159 seconds.
+  path: Assets/Level Tiles/rock platform tiles_1.asset
+  artifactKey: Guid(4f2d3792a45defb418a20f715dd39e25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level Tiles/rock platform tiles_1.asset using Guid(4f2d3792a45defb418a20f715dd39e25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7119612b9dd115fa5d52813de54adf22') in 0.010461 seconds 
+  Import took 0.016153 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 8.775703 seconds.
-  path: Assets/Level Tiles/floor tiles-Sheet 1.png
-  artifactKey: Guid(28e6cc7edaf56394fa1acb323770a28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/floor tiles-Sheet 1.png using Guid(28e6cc7edaf56394fa1acb323770a28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a9b8d713a513b0da73ba2b22bf174ba') in 0.034800 seconds 
-  Import took 0.038089 seconds .
+  Time since last request: 3.733406 seconds.
+  path: Assets/Level Tiles/Level Tiles.prefab
+  artifactKey: Guid(e8493af920f673e4395b1d650a2acc1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level Tiles/Level Tiles.prefab using Guid(e8493af920f673e4395b1d650a2acc1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb4e20e77a18f7925962de4e31d14461') in 0.013914 seconds 
+  Import took 0.019611 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 2.970899 seconds.
-  path: Assets/Level Tiles/floor tiles-Sheet 1.png
-  artifactKey: Guid(28e6cc7edaf56394fa1acb323770a28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/floor tiles-Sheet 1.png using Guid(28e6cc7edaf56394fa1acb323770a28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fab149533f322e51cbf19eeb80db459a') in 0.035910 seconds 
-  Import took 0.038976 seconds .
+  Time since last request: 0.000243 seconds.
+  path: Assets/Level Tiles/rock platform tiles_2.asset
+  artifactKey: Guid(c8b53a16d15a3574885dba76631b16bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level Tiles/rock platform tiles_2.asset using Guid(c8b53a16d15a3574885dba76631b16bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce726be99429cc1204cf54b68c02fedc') in 0.011609 seconds 
+  Import took 0.017230 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 92.285477 seconds.
-  path: Assets/Level Tiles/floor tiles-Sheet 1.png
-  artifactKey: Guid(28e6cc7edaf56394fa1acb323770a28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/floor tiles-Sheet 1.png using Guid(28e6cc7edaf56394fa1acb323770a28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e37835a0c37c415da7a21d82caaa785') in 0.035772 seconds 
-  Import took 0.039901 seconds .
+  Time since last request: 2.988248 seconds.
+  path: Assets/Level Tiles/Level Tiles.prefab
+  artifactKey: Guid(e8493af920f673e4395b1d650a2acc1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level Tiles/Level Tiles.prefab using Guid(e8493af920f673e4395b1d650a2acc1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04c3200bf8ead6195354ea11a9d58a6a') in 0.018019 seconds 
+  Import took 0.025380 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 54.506508 seconds.
-  path: Assets/Level Tiles/floor tiles-Sheet 1.png
-  artifactKey: Guid(28e6cc7edaf56394fa1acb323770a28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/floor tiles-Sheet 1.png using Guid(28e6cc7edaf56394fa1acb323770a28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b4cc82d96b7a53ad07aad1b63eb8678') in 0.034707 seconds 
-  Import took 0.038586 seconds .
+  Time since last request: 0.000182 seconds.
+  path: Assets/Level Tiles/rock platform tiles_3.asset
+  artifactKey: Guid(89958900061fc1040a425295fb4f66f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level Tiles/rock platform tiles_3.asset using Guid(89958900061fc1040a425295fb4f66f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34035d74bb377da95a190b63904f4f3e') in 0.010542 seconds 
+  Import took 0.016852 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 21.922721 seconds.
-  path: Assets/Level Tiles/floor tiles-Sheet 1.png
-  artifactKey: Guid(28e6cc7edaf56394fa1acb323770a28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/floor tiles-Sheet 1.png using Guid(28e6cc7edaf56394fa1acb323770a28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89d7f759d5b16770498b6198353ebb5a') in 0.028947 seconds 
-  Import took 0.032112 seconds .
+  Time since last request: 866.252878 seconds.
+  path: Assets/Level Tiles/Ladder palette.prefab
+  artifactKey: Guid(132ab3ffb2135894f8e75e20c3e06fa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level Tiles/Ladder palette.prefab using Guid(132ab3ffb2135894f8e75e20c3e06fa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad508b57f44f07b440bbd198eb943981') in 0.013622 seconds 
+  Import took 0.019405 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 41.774365 seconds.
-  path: Assets/Level Tiles/floor tiles-Sheet 1.png
-  artifactKey: Guid(28e6cc7edaf56394fa1acb323770a28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/floor tiles-Sheet 1.png using Guid(28e6cc7edaf56394fa1acb323770a28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fb4cb2b5b33ae0b310dec502fafe591') in 0.037179 seconds 
-  Import took 0.040325 seconds .
+  Time since last request: 22.181841 seconds.
+  path: Assets/Level Tiles/Ladder palette.prefab
+  artifactKey: Guid(132ab3ffb2135894f8e75e20c3e06fa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level Tiles/Ladder palette.prefab using Guid(132ab3ffb2135894f8e75e20c3e06fa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c398105a3b6e76c19415b219aaba7705') in 0.019656 seconds 
+  Import took 0.027522 seconds .
 
-========================================================================
-Received Import Request.
-  Time since last request: 46.796822 seconds.
-  path: Assets/Level Tiles/floor tiles-Sheet 1.png
-  artifactKey: Guid(28e6cc7edaf56394fa1acb323770a28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level Tiles/floor tiles-Sheet 1.png using Guid(28e6cc7edaf56394fa1acb323770a28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d1e2db357a90f8d81d3273094e386d7') in 0.034009 seconds 
-  Import took 0.037121 seconds .
-
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
