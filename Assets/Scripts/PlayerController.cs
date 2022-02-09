@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     bool isShooting;
     bool isFacingRight;
     bool isGrounded;
-    bool keyShootRelease;
+    bool keyShootRelease = true;
     bool isTakingDamage;
     bool isInvincible;
     bool hitSideRight;
@@ -31,6 +31,8 @@ public class PlayerController : MonoBehaviour
     float horizontal;
     public float speed; // 1.5f
     public float jumpHeight;
+
+    Vector2 direction;
 
     // Start is called before the first frame update
     void Start()
@@ -97,13 +99,17 @@ public class PlayerController : MonoBehaviour
 
     void ShootBullet()
     {
-        GameObject bullet = Instantiate(bulletPrefab,bulletPos.position, Quaternion.identity ); 
+        GameObject bulletObject = Instantiate(bulletPrefab,rb.position + Vector2.up*0.25f, Quaternion.identity );
+        Bullet_Script bullet = bulletObject.GetComponent<Bullet_Script>();
         bullet.name = bulletPrefab.name;
-        bullet.GetComponent<Bullet_Script>().SetDamageValue(bulletDamage);
+        /*bullet.GetComponent<Bullet_Script>().SetDamageValue(bulletDamage);
         bullet.GetComponent<Bullet_Script>().SetBulletSpeed(bulletSpeed);
         bullet.GetComponent<Bullet_Script>().SetBulletDirection((isFacingRight) ? Vector2.right : Vector2.left );
-        bullet.GetComponent<Bullet_Script>().Shoot();
-        
+        bullet.GetComponent<Bullet_Script>().Shoot();*/
+        bullet.SetDamageValue(bulletDamage);
+        bullet.SetBulletSpeed(bulletSpeed);
+        bullet.SetBulletDirection((isFacingRight) ? Vector2.right : Vector2.left);
+        bullet.Shoot();
     }
 
     void PlayerDirectionInput()
@@ -113,6 +119,7 @@ public class PlayerController : MonoBehaviour
     }
     void PlayerMovement()
     {
+        //Move Code
         if (horizontal < 0 )
        {
            if(isFacingRight)
@@ -131,6 +138,7 @@ public class PlayerController : MonoBehaviour
                }
            }
             rb.velocity = new Vector2(-speed, rb.velocity.y);
+            
        }
        else if (horizontal > 0 )
        {
@@ -166,7 +174,7 @@ public class PlayerController : MonoBehaviour
            }
             rb.velocity = new Vector2(0f, rb.velocity.y);
        }
-
+        //Jump Code
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             if(isShooting)
@@ -212,7 +220,8 @@ public class PlayerController : MonoBehaviour
             isShooting =true;
             keyShootRelease = false;
             shootTime = Time.time;
-            Invoke("ShootBullet",01f);
+            ShootBullet();
+            //Invoke("ShootBullet",01f);
         }
         if(!keyShoot && !keyShootRelease)
         {

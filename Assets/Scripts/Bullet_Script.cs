@@ -14,7 +14,7 @@ public class Bullet_Script : MonoBehaviour
     [SerializeField] Vector2 bulletDirection;
     [SerializeField] float destroyDelay;
 
-    void awake()
+    void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
@@ -38,7 +38,7 @@ public class Bullet_Script : MonoBehaviour
       public void SetDestroyDelay(float delay)
     {
         this.destroyDelay = delay;
-    } 
+    }
 
     public void Shoot()
     {
