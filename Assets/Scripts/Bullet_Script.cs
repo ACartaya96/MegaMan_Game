@@ -6,10 +6,16 @@ public class Bullet_Script : MonoBehaviour
 {
     Rigidbody2D rb;
     SpriteRenderer sprite;
+    Animator animator;
     
 
     float destroyTime;
+
+    bool freezeBullet;
+
     public int damage = 1;
+
+    RigidbodyConstraints2D rbConstraints;
 
     [SerializeField] float bulletSpeed;
     [SerializeField] Vector2 bulletDirection;
@@ -48,6 +54,25 @@ public class Bullet_Script : MonoBehaviour
         destroyTime = destroyDelay;
     }
 
+    public void FreezeBullet(bool freeze)
+    {
+       if(freeze)
+        {
+            freezeBullet = true;
+            rbConstraints = rb.constraints;
+            animator.speed = 0;
+            rb.constraints = RigidbodyConstraints2D.FreezeAll;
+            rb.velocity = Vector2.zero;
+         }
+        else
+        {
+            freezeBullet = false;
+            animator.speed = 1;
+            rb.constraints = rbConstraints;
+            rb.velocity = bulletDirection * bulletSpeed;
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.CompareTag("Enemy"))
@@ -69,6 +94,8 @@ public class Bullet_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (freezeBullet) return;
+
         destroyTime -= Time.deltaTime;
         if(destroyTime < 0)
         {

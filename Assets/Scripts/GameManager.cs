@@ -51,6 +51,8 @@ public class GameManager : MonoBehaviour
         {
             if(initReadyScreen)
             {
+                FreezePlayer(true);
+                FreezeEnemies(true);
                 screenMessageText.alignment = TextAlignmentOptions.Center;
                 screenMessageText.alignment = TextAlignmentOptions.Top;
                 screenMessageText.fontStyle = FontStyles.UpperCase;
@@ -61,6 +63,8 @@ public class GameManager : MonoBehaviour
             gamePlayerReadyTime -= Time.deltaTime;
             if(gamePlayerReadyTime < 0)
             {
+                FreezePlayer(false);
+                FreezeEnemies(false);
                 screenMessageText.text = "";
                 playerReady = false;
             }
@@ -75,7 +79,7 @@ public class GameManager : MonoBehaviour
 
         if(!isGameOver)
         {
-            //do stuff when game is running
+            RepositionEnemies();
         }
         else
         {
@@ -113,6 +117,38 @@ public class GameManager : MonoBehaviour
         SoundManager.Instance.MusicSource.Play();
     }
 
+    public void AddScorePoints(int points)
+    {
+        playerScore += points;
+    }
+
+    private void FreezePlayer(bool freeze)
+    {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null)
+        {
+            player.GetComponent<PlayerController>().FreezeInput(freeze);
+        }
+
+    }
+
+    private void FreezeEnemies(bool freeze)
+    {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach(GameObject enemy in enemies)
+        {
+            enemy.GetComponent<EnemyController>().FreezeEnemy(freeze);
+        }
+    }
+
+    private void FreezeBullets(bool freeze)
+    {
+        GameObject[] bullets = GameObject.FindGameObjectsWithTag("Bullets");
+        foreach(GameObject bullet in bullets)
+        {
+            bullet.GetComponent<Bullet_Script>().FreezeBullet(freeze);
+        }
+    }
     private void RepositionEnemies()
     {
         Vector3 worldLeft = Camera.main.ViewportToWorldPoint(new Vector3(-0.1f, 0, 0));
@@ -126,11 +162,30 @@ public class GameManager : MonoBehaviour
                 switch (enemy.name)
                 {
                     case "HomingEnemy":
-                        enemy.transform.position = new Vector3(worldRight.x, UnityEngine.Random.Range(-1.5f, 1.5f), 0);
+                        enemy.transform.position = new Vector3(worldRight.x, UnityEngine.Random.Range(-1.0f, 1.0f), 0);
                         enemy.GetComponent<HomingEnemy>().ResetFollowingPath();
+                        enemy.GetComponent<HomingEnemy>().state = 0;
                         break;
                 }
             }
+        }
+    }
+
+    private void SpawnEnemies()
+    {
+        GameObject spawnZone = GameObject.FindGameObjectWithTag("Spawn Zones");
+        switch(spawnZone.name)
+        {
+            case "Floor 1":
+                GameObject [] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+                foreach(GameObject enemy in enemies)
+                {
+                    if (enemies.Length < 6)
+                    {
+                       
+                    }
+                }
+                break;
         }
     }
 }

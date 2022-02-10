@@ -36,7 +36,7 @@ public class HomingEnemy : MonoBehaviour
     //State Machine
     const int PATROLLING = 0;
     const int HOMING = 1;
-    int state = PATROLLING;
+    public int state = PATROLLING;
 
     // Start is called before the first frame update
     void Start()
@@ -121,25 +121,28 @@ public class HomingEnemy : MonoBehaviour
      void Patrol()
      {
 
-         if(!isFollowingPath)
-         {
-             float distance = (isFacingRight) ? bezierDistance : -bezierDistance;
-             startPos = rb.transform.position;
-             endPos = new Vector3(startPos.x + distance, startPos.y, startPos.z);
-             midPoint = startPos + (((endPos - startPos) /2) + bezierHeight);
-             pathTimeStart = Time.time;
-             isFollowingPath = true;
-         }
-         else
-         {
-             float percentage = (Time.time - pathTimeStart) / bezierTime;
-             rb.transform.position = UtilityFunction.CalculateQuadraticBezierPoint(startPos, midPoint, endPos, percentage);
-             if (percentage >= 1f)
-             {
-                 bezierHeight *= -1;
-                 isFollowingPath = false;
-             }
-         }
+        if(!isFollowingPath)
+        {
+            float distance = (isFacingRight) ? bezierDistance : -bezierDistance;
+            startPos = rb.transform.position;
+            endPos = new Vector3(startPos.x + distance, startPos.y, startPos.z);
+            midPoint = startPos + (((endPos - startPos) /2) + bezierHeight);
+            pathTimeStart = Time.time;
+            isFollowingPath = true;
+        }
+        else
+        {
+            float percentage = (Time.time - pathTimeStart) / bezierTime;
+            rb.transform.position = UtilityFunction.CalculateQuadraticBezierPoint(startPos, midPoint, endPos, percentage);
+            if (percentage >= 1f)
+            {
+                bezierHeight *= -1;
+                isFollowingPath = false;
+            }
+        }
+        /*Vector2 position = rb.position;
+        position.x = position.x + speed * moving * Time.deltaTime;
+        rb.MovePosition(position);*/
      }
 
      void HomeInPlayer()
@@ -148,6 +151,7 @@ public class HomingEnemy : MonoBehaviour
          {
              transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
          }
+         
      }
 
      bool CanSeePlayer(float distance)

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 220409467102880096}
   - component: {fileID: 220409467102880098}
   - component: {fileID: 220409467102880103}
+  - component: {fileID: 3429161861621774408}
   m_Layer: 8
   m_Name: HomingEnemy
   m_TagString: Enemy
@@ -121,6 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   freezeEnemy: 0
+  enemyPoints: 500
   currentHealth: 0
   maxHealth: 1
   contactDamage: 3
@@ -136,8 +138,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47269cf9e6c493c4ca2a4aa3437b1f78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moving: 1
-  speed: 5
+  moving: -1
+  speed: 3
   radius: 10
   distance: 6
   changeTime: 3
@@ -146,8 +148,9 @@ MonoBehaviour:
   direction: {x: 0, y: 0}
   bezierTime: 1
   bezierDistance: 5
-  bezierHeight: {x: 0, y: 0.8, z: 0}
+  bezierHeight: {x: 0, y: 0.2, z: 0}
   moveDirection: 0
+  state: 0
 --- !u!61 &220409467102880103
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -174,6 +177,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &3429161861621774408
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 220409467102880102}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &220409467890319129
 GameObject:
   m_ObjectHideFlags: 0

@@ -23,8 +23,14 @@ public class PlayerController : MonoBehaviour
     bool isJumping;
     public bool keyShootRelease = true;
     bool isTakingDamage;
+   
     bool hitSideRight;
     bool isInvincible;
+
+    bool freezeInput;
+    bool freezePlayer;
+
+    RigidbodyConstraints2D rbConstraints;
 
     [SerializeField] int bulletDamage = 1;
     [SerializeField] float bulletSpeed = 5f;
@@ -124,8 +130,10 @@ public class PlayerController : MonoBehaviour
 
     void PlayerDirectionInput()
     {
-        horizontal = Input.GetAxis("Horizontal");
-       
+        if (!freezeInput)
+        {
+            horizontal = Input.GetAxis("Horizontal");
+        }
     }
     void PlayerMovement()
     {
@@ -210,13 +218,17 @@ public class PlayerController : MonoBehaviour
                    animator.Play("Player_Jump");
                }
         }
-        if (Input.GetButton("Jump"))
+
+        if (!freezeInput)
         {
-            jumpPressed = true;
-        }
-        else
-        {
-            jumpPressed = false;
+            if (Input.GetButton("Jump"))
+            {
+                jumpPressed = true;
+            }
+            else
+            {
+                jumpPressed = false;
+            }
         }
     }
 
@@ -225,7 +237,10 @@ public class PlayerController : MonoBehaviour
         float shootTimeLength = 0;
         float keyShootReleaseTimeLength = 0;
 
-        keyShoot = Input.GetKeyDown(KeyCode.C); // enter key
+        if (!freezeInput)
+        {
+            keyShoot = Input.GetKeyDown(KeyCode.C); // enter key
+        }
 
         if(keyShoot && keyShootRelease )
         {
@@ -258,6 +273,7 @@ public class PlayerController : MonoBehaviour
     {
         isInvincible = invincibility;
     }
+
     public void TakeDamage(int damage)
     {
         if (!isInvincible)
@@ -298,6 +314,30 @@ public class PlayerController : MonoBehaviour
     void Defeat()
     {
         Destroy(gameObject);
+    }
+
+    public void FreezeInput(bool freeze)
+    {
+        freezeInput = freeze;
+    }
+
+    public void FreezePlayer(bool freeze)
+    {
+        if (freeze)
+        {
+            freezePlayer = true;
+            rbConstraints = rb.constraints;
+            animator.speed = 0;
+            rb.constraints = RigidbodyConstraints2D.FreezeAll;
+
+        }
+        else
+        {
+            freezePlayer = false;
+            rb.constraints = rbConstraints;
+            animator.speed = 1;
+
+        }
     }
 }
 
