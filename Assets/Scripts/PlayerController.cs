@@ -339,5 +339,14 @@ public class PlayerController : MonoBehaviour
 
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+       if(collision.CompareTag("Spawn Zones"))
+        {
+            //Debug.Log("Spawning Enemies");
+            //GameManager.Instance.SpawnEnemies();
+        }
+    }
 }
 
