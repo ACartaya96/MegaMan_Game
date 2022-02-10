@@ -5,16 +5,19 @@ TagManager:
   serializedVersion: 2
   tags:
   - Floor
+  - Enemy
+  - Explosion
+  - Spawn Zones
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Projectile
+  - Player
+  - Enemy
   - 
   - 
   - 
@@ -41,4 +44,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 2353252901
     locked: 0
