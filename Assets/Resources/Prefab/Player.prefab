@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5839676054538296801}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.24, y: -2.12, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.4248, y: 1.4248, z: 1.4248}
   m_Children:
   - {fileID: 5839676056593034747}
@@ -73,9 +73,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1941714395
+  m_SortingLayer: 1
+  m_SortingOrder: 1
   m_Sprite: {fileID: 3850543812580517277, guid: b5b1efb751fa7794dba9a4d9dc24d873, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -148,6 +148,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPos: {fileID: 5839676056593034747}
   bulletPrefab: {fileID: 6206260289790554311, guid: 84ed7dbdedbd39c4ba2c689d32282bac, type: 3}
+  keyShoot: 0
+  keyShootRelease: 1
   bulletDamage: 1
   bulletSpeed: 5
   fallMultiplier: 2

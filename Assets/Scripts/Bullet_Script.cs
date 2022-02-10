@@ -59,7 +59,7 @@ public class Bullet_Script : MonoBehaviour
             }
             Destroy(gameObject, 0.01f);
         }
-        if(other.gameObject.CompareTag("Screen"))
+        else if(other.gameObject.CompareTag("Floor"))
         {
             Destroy(gameObject, 0.01f);
         }

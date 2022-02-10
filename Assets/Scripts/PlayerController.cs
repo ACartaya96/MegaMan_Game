@@ -10,15 +10,21 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Transform bulletPos;
     [SerializeField] GameObject bulletPrefab;
 
+    [SerializeField] AudioClip jumpLandedClip;
+    [SerializeField] AudioClip shootBulletClip;
+    [SerializeField] AudioClip takingDamageClip;
+    [SerializeField] AudioClip explodeEffectClip;
+
     bool jumpPressed;
-    bool keyShoot;
+    public bool keyShoot = false;
     bool isShooting;
     bool isFacingRight;
     bool isGrounded;
-    bool keyShootRelease = true;
+    bool isJumping;
+    public bool keyShootRelease = true;
     bool isTakingDamage;
-    bool isInvincible;
     bool hitSideRight;
+    bool isInvincible;
 
     [SerializeField] int bulletDamage = 1;
     [SerializeField] float bulletSpeed = 5f;
@@ -50,7 +56,7 @@ public class PlayerController : MonoBehaviour
     {  
        if(isTakingDamage)
        {
-           animator.Play("Player_Hit");
+           //animator.Play("Player_Hit");
            return;
        }
        PlayerDirectionInput();
@@ -75,6 +81,11 @@ public class PlayerController : MonoBehaviour
         if (raycastHit.collider != null)
         {
             isGrounded = true;
+            if(isJumping)
+            {
+                SoundManager.Instance.Play(jumpLandedClip);
+                isJumping = false;
+            }
         }
         raycastColor = (isGrounded) ? Color.green : Color.red;
         Debug.DrawRay(box_orgin + new Vector3(box2d.bounds.extents.x,0), Vector2.down * (box2d.bounds.extents.y /4f + raycastDistance), raycastColor);
@@ -100,13 +111,15 @@ public class PlayerController : MonoBehaviour
     void ShootBullet()
     {
         GameObject bullet = Instantiate(bulletPrefab, bulletPos.position, Quaternion.identity );
-
+        
         bullet.name = bulletPrefab.name;
+        
         bullet.GetComponent<Bullet_Script>().SetDamageValue(bulletDamage);
         bullet.GetComponent<Bullet_Script>().SetBulletSpeed(bulletSpeed);
         bullet.GetComponent<Bullet_Script>().SetBulletDirection((isFacingRight) ? Vector2.right : Vector2.left );
         bullet.GetComponent<Bullet_Script>().Shoot();
-   
+
+       // SoundManager.Instance.Play(shootBulletClip);
     }
 
     void PlayerDirectionInput()
@@ -160,6 +173,7 @@ public class PlayerController : MonoBehaviour
        {
             if(isGrounded)
            {
+                
                 if(isShooting)
                 {
                     animator.Play("Player_Shoot");
@@ -186,13 +200,14 @@ public class PlayerController : MonoBehaviour
         }
         if (!isGrounded)
         {
-            if(isShooting)
+            isJumping = true;
+            if (isShooting)
                {
-                    // animator.Play("Player_JumpShoot");
+                    animator.Play("Player_JumpShoot");
                }
             else
                {
-                   // animator.Play("Player_Jump");
+                   animator.Play("Player_Jump");
                }
         }
         if (Input.GetButton("Jump"))
@@ -207,17 +222,17 @@ public class PlayerController : MonoBehaviour
 
     void PlayerShootInput()
     {
-        float shootTimeLength= 0;
+        float shootTimeLength = 0;
         float keyShootReleaseTimeLength = 0;
 
-        keyShoot = Input.GetButtonDown("Primary Fire"); // enter key
+        keyShoot = Input.GetKeyDown(KeyCode.C); // enter key
 
         if(keyShoot && keyShootRelease )
         {
             isShooting =true;
             keyShootRelease = false;
             shootTime = Time.time;
-            Invoke("ShootBullet",1f);
+            Invoke("ShootBullet",0.01f);
         }
         if(!keyShoot && !keyShootRelease)
         {
@@ -229,6 +244,7 @@ public class PlayerController : MonoBehaviour
             if(shootTimeLength >= 0.25f || keyShootReleaseTimeLength >= 0.15f)
             {
                 isShooting = false;
+                keyShootRelease = true;
             }
         }
 
@@ -247,7 +263,7 @@ public class PlayerController : MonoBehaviour
         if (!isInvincible)
         {
             currentHealth -=damage;
-            Mathf.Clamp(currentHealth,0,maxHealth);
+            currentHealth = Mathf.Clamp(currentHealth,0,maxHealth);
             //UIHealthBar.instance.setValue(currentHealth / (float)maxHealth); waiting for health bar
             if(currentHealth <= 0)
             {
@@ -264,19 +280,20 @@ public class PlayerController : MonoBehaviour
         if(!isTakingDamage)
         {
             isTakingDamage = true;
-            isInvincible = true;
+            Invincible(true);
             float hitForceX = 0.50f;
             float hitForceY = 1.5f;
             if(hitSideRight) hitForceX = -hitForceX;
             rb.velocity = Vector2.zero;
             rb.AddForce(new Vector2(hitForceX, hitForceY),ForceMode2D.Impulse);
+            //SoundManager.Instance.Play(takingDamageClip);
         }
     }
     void StopDamageAnimation()
     {
         isTakingDamage = false ;
-        isInvincible = false ;
-        //animator.Play("Player_Hit",-1,0f);
+        Invincible(false);
+        animator.Play("Player_Hit",-1,0f);
     }
     void Defeat()
     {
