@@ -99,17 +99,14 @@ public class PlayerController : MonoBehaviour
 
     void ShootBullet()
     {
-        GameObject bulletObject = Instantiate(bulletPrefab,rb.position + Vector2.up*0.25f, Quaternion.identity );
-        Bullet_Script bullet = bulletObject.GetComponent<Bullet_Script>();
+        GameObject bullet = Instantiate(bulletPrefab, bulletPos.position, Quaternion.identity );
+
         bullet.name = bulletPrefab.name;
-        /*bullet.GetComponent<Bullet_Script>().SetDamageValue(bulletDamage);
+        bullet.GetComponent<Bullet_Script>().SetDamageValue(bulletDamage);
         bullet.GetComponent<Bullet_Script>().SetBulletSpeed(bulletSpeed);
         bullet.GetComponent<Bullet_Script>().SetBulletDirection((isFacingRight) ? Vector2.right : Vector2.left );
-        bullet.GetComponent<Bullet_Script>().Shoot();*/
-        bullet.SetDamageValue(bulletDamage);
-        bullet.SetBulletSpeed(bulletSpeed);
-        bullet.SetBulletDirection((isFacingRight) ? Vector2.right : Vector2.left);
-        bullet.Shoot();
+        bullet.GetComponent<Bullet_Script>().Shoot();
+   
     }
 
     void PlayerDirectionInput()
@@ -130,11 +127,11 @@ public class PlayerController : MonoBehaviour
            {
                if(isShooting)
                {
-                   // animator.Play("Player_RunShoot");
+                   animator.Play("Player_RunShoot");
                }
                else
                {
-                   // animator.Play("Player_Run");
+                   animator.Play("Player_Run");
                }
            }
             rb.velocity = new Vector2(-speed, rb.velocity.y);
@@ -150,11 +147,11 @@ public class PlayerController : MonoBehaviour
            {
                if(isShooting)
                {
-                   // animator.Play("Player_RunShoot");
+                   animator.Play("Player_RunShoot");
                }
                else
                {
-                   // animator.Play("Player_Run");
+                   animator.Play("Player_Run");
                }
            }
             rb.velocity = new Vector2(speed, rb.velocity.y);
@@ -165,11 +162,11 @@ public class PlayerController : MonoBehaviour
            {
                 if(isShooting)
                 {
-                    // animator.Play("Player_Shoot");
+                    animator.Play("Player_Shoot");
                 }
                 else
                 {
-                   // animator.Play("Player_Idle");
+                    animator.Play("Player_Idle");
                 }
            }
             rb.velocity = new Vector2(0f, rb.velocity.y);
@@ -179,11 +176,11 @@ public class PlayerController : MonoBehaviour
         {
             if(isShooting)
                {
-                    // animator.Play("Player_JumpShoot");
+                    animator.Play("Player_JumpShoot");
                }
             else
                {
-                   // animator.Play("Player_Jump");
+                   animator.Play("Player_Jump");
                }
             rb.velocity = new Vector2(rb.velocity.x, jumpHeight); //jump heght should be 4.875f
         }
@@ -220,8 +217,7 @@ public class PlayerController : MonoBehaviour
             isShooting =true;
             keyShootRelease = false;
             shootTime = Time.time;
-            ShootBullet();
-            //Invoke("ShootBullet",01f);
+            Invoke("ShootBullet",1f);
         }
         if(!keyShoot && !keyShootRelease)
         {

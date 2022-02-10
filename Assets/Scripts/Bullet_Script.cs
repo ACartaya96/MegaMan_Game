@@ -6,6 +6,7 @@ public class Bullet_Script : MonoBehaviour
 {
     Rigidbody2D rb;
     SpriteRenderer sprite;
+    
 
     float destroyTime;
     public int damage = 1;
@@ -51,6 +52,11 @@ public class Bullet_Script : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Enemy"))
         {
+            EnemyController enemy = other.gameObject.GetComponent<EnemyController>();
+            if(enemy != null)
+            {
+                enemy.TakeDamage(this.damage);
+            }
             Destroy(gameObject, 0.01f);
         }
         if(other.gameObject.CompareTag("Screen"))
