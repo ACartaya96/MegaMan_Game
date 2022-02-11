@@ -55,6 +55,7 @@ public class EnemyController : MonoBehaviour
 
     public void FreezeEnemy(bool freeze)
     {
+        Debug.Log(freeze.ToString());
         if(freeze)
         {
             freezeEnemy = true;
@@ -68,7 +69,7 @@ public class EnemyController : MonoBehaviour
             freezeEnemy = false;
             rb.constraints = rbConstraints;
             animator.speed = 1;
-            
+        
         }
     }
 
