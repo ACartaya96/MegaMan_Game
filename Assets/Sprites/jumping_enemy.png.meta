@@ -1,19 +1,31 @@
 fileFormatVersion: 2
-guid: 3a991052835193045affcf45234e57ff
+guid: 82732fca571e10740982fa149aecfbc4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1214740285959694536
-    second: run_shooting_64x64_0
+      213: -5053383548171141528
+    second: enemy_jumping_0
   - first:
-      213: 8898079558024525156
-    second: run_shooting_64x64_1
+      213: 1026455165219284484
+    second: enemy_jumping_1
   - first:
-      213: 5900549278906072755
-    second: run_shooting_64x64_2
+      213: 7911572967411157400
+    second: enemy_jumping_2
   - first:
-      213: -7949372937735069787
-    second: run_shooting_64x64_3
+      213: -16228102498144401
+    second: enemy_jumping_3
+  - first:
+      213: 1874050297744291532
+    second: enemy_jumping_4
+  - first:
+      213: 7369911013296131339
+    second: enemy_jumping_5
+  - first:
+      213: -124157876022443222
+    second: enemy_jumping_6
+  - first:
+      213: 2631064953112911110
+    second: enemy_jumping_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -56,8 +68,8 @@ TextureImporter:
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 7
-  spritePivot: {x: 0.5, y: 0}
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
@@ -175,13 +187,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: run_shooting_64x64_0
+      name: enemy_jumping_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 8
         y: 0
-        width: 50
-        height: 49
+        width: 49
+        height: 60
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,19 +201,61 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c8ebf6aadf9bd010800000000000000
-      internalID: 1214740285959694536
+      spriteID: 86eb479df66ced9b0800000000000000
+      internalID: -5053383548171141528
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: run_shooting_64x64_1
+      name: enemy_jumping_1
       rect:
         serializedVersion: 2
-        x: 65
+        x: 75
         y: 0
-        width: 43
+        width: 42
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 406a2ccc883be3e00800000000000000
+      internalID: 1026455165219284484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_jumping_2
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 0
+        width: 49
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 899002152bd8bcd60800000000000000
+      internalID: 7911572967411157400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_jumping_3
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 0
+        width: 42
         height: 50
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -210,20 +264,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4657737c6345c7b70800000000000000
-      internalID: 8898079558024525156
+      spriteID: f6f283370a856cff0800000000000000
+      internalID: -16228102498144401
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: run_shooting_64x64_2
+      name: enemy_jumping_4
       rect:
         serializedVersion: 2
-        x: 129
+        x: 264
         y: 0
-        width: 43
-        height: 49
+        width: 49
+        height: 46
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,20 +285,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3be32e48e46f2e150800000000000000
-      internalID: 5900549278906072755
+      spriteID: cc6734011d6f10a10800000000000000
+      internalID: 1874050297744291532
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: run_shooting_64x64_3
+      name: enemy_jumping_5
       rect:
         serializedVersion: 2
-        x: 193
+        x: 331
         y: 0
-        width: 43
-        height: 50
+        width: 42
+        height: 43
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,8 +306,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5af92334e672ea190800000000000000
-      internalID: -7949372937735069787
+      spriteID: b0d41c5e40f274660800000000000000
+      internalID: 7369911013296131339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_jumping_6
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 0
+        width: 42
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a238d9fc117e64ef0800000000000000
+      internalID: -124157876022443222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_jumping_7
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 0
+        width: 42
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60d564782ab638420800000000000000
+      internalID: 2631064953112911110
       vertices: []
       indices: 
       edges: []
