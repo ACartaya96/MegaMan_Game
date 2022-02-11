@@ -10,17 +10,17 @@ public class UIHealthBar : MonoBehaviour
   
     public static UIHealthBar instance{get; private set; }
 
-    void awake()
+    void Awake()
     {
         instance = this;
     }
-    private void Start()
+    void Start()
     {
-       // originalSize = mask.rectTransform.rect.height;
+       originalSize = mask.rectTransform.rect.height;
     }
     public void setValue(float value)
     {
-        //mask.rectTransform.SetSizeWithCurrentAnchors(rectTransform.Axis.Vertical, originalSize * value);
+        mask.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, originalSize * value);
     }
   
 }
