@@ -280,7 +280,7 @@ public class PlayerController : MonoBehaviour
         {
             currentHealth -=damage;
             currentHealth = Mathf.Clamp(currentHealth,0,maxHealth);
-            //UIHealthBar.instance.setValue(currentHealth / (float)maxHealth); waiting for health bar
+            UIHealthBar.instance.setValue(currentHealth / (float)maxHealth); 
             if(currentHealth <= 0)
             {
                 Defeat();
