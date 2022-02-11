@@ -24,9 +24,6 @@ public class GameManager : MonoBehaviour
     TextMeshProUGUI playerScoreText;
     TextMeshProUGUI screenMessageText;
 
-    [SerializeField] GameObject homingPrefab;
-
-
     private void Awake()
     {
         if (Instance == null)
@@ -83,7 +80,6 @@ public class GameManager : MonoBehaviour
         if(!isGameOver)
         {
             RepositionEnemies();
-          
         }
         else
         {
@@ -175,43 +171,21 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void SpawnEnemies()
+    private void SpawnEnemies()
     {
-        Vector3 worldLeft = Camera.main.ViewportToWorldPoint(new Vector3(-0.1f, 0, 0));
-        Vector3 worldRight = Camera.main.ViewportToWorldPoint(new Vector3(1.1f, 0, 0));
-
         GameObject spawnZone = GameObject.FindGameObjectWithTag("Spawn Zones");
         switch(spawnZone.name)
         {
             case "Floor 1":
-                Debug.Log("Found Floor 1");
-                GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-                for (int i = 0; i < 6; i++)
+                GameObject [] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+                foreach(GameObject enemy in enemies)
                 {
                     if (enemies.Length < 6)
                     {
-                       Vector3 spawn = new Vector3(worldRight.x, UnityEngine.Random.Range(-1.0f, 1.0f), 0);
-                        Instantiate(homingPrefab, spawn, Quaternion.identity);    
+                       
                     }
                 }
                 break;
         }
     }
-    public void PlayGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-
-    }
-
-    public void QuitGame()
-    {
-        Debug.Log("QUIT");
-        Application.Quit();
-    }
-
-
-
-
-
-
 }
