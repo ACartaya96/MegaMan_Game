@@ -16,6 +16,7 @@ public class HomingEnemy : MonoBehaviour
     [SerializeField] Vector2 direction;
 
     Rigidbody2D rb;
+    GameObject kg;
     Animator animator;
     EnemyController enemyController;
 
@@ -38,19 +39,26 @@ public class HomingEnemy : MonoBehaviour
     const int HOMING = 1;
     public int state = PATROLLING;
 
-    // Start is called before the first frame update
-    void Start()
+
+
+    private void Awake()
     {
         enemyController = GetComponent<EnemyController>();
         rb = enemyController.GetComponent<Rigidbody2D>();
         animator = enemyController.GetComponent<Animator>();
+        kg = GameObject.FindGameObjectWithTag("Player");
 
         isFacingRight = true;
-        if(moveDirection == MoveDirection.Left)
+        if (moveDirection == MoveDirection.Left)
         {
             isFacingRight = false;
             enemyController.Flip();
         }
+    }
+    // Start is called before the first frame update
+    void Start()
+    {
+        
     }
 
     private void Update()
@@ -61,7 +69,6 @@ public class HomingEnemy : MonoBehaviour
             return;
         }
         canSeePlayer = CanSeePlayer(distance);
-
         //AI Behavior
         switch (state)
         {
@@ -73,20 +80,19 @@ public class HomingEnemy : MonoBehaviour
                 }
                 break;
             case HOMING:
+               
                 HomeInPlayer();
+                if (kg.GetComponent<PlayerController>().isInvincible)
+                {
+                    state = PATROLLING;
+                    ResetFollowingPath();
+                    SetMoveDirection(MoveDirection.Left);
+                }
                 break;
         }
 
-        //Animation.Play("Homing_Flying");
+        animator.Play("Homing_Flying");
 
-
-        /*timer -= Time.deltaTime;
-        
-        if(timer < 0)
-        {
-            moving = -moving;
-            timer = changeTime;
-        }*/
     }
     // Update is called once per frame
 
@@ -140,30 +146,33 @@ public class HomingEnemy : MonoBehaviour
                 isFollowingPath = false;
             }
         }
-        /*Vector2 position = rb.position;
-        position.x = position.x + speed * moving * Time.deltaTime;
-        rb.MovePosition(position);*/
      }
 
      void HomeInPlayer()
      {
-         if(Vector2.Distance(transform.position, player.position) > 0.5)
-         {
-             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
-         }
-         
+        pathTimeStart += Time.deltaTime;
+        transform.position = Vector2.MoveTowards(transform.position, kg.GetComponent<PlayerController>().transform.position, speed * Time.deltaTime);
+        
+        if(kg.GetComponent<PlayerController>().transform.position.x > transform.position.x)
+        {
+            SetMoveDirection(MoveDirection.Right);
+        }
+        else
+        {
+            SetMoveDirection(MoveDirection.Left);
+        }
      }
 
      bool CanSeePlayer(float distance)
      {
          bool val = false;
          RaycastHit2D hit = Physics2D.CircleCast(rb.position, radius, direction);
-         Debug.DrawRay(rb.position, direction, Color.red);
+        
          if (hit.collider != null)
          {
              if (hit.collider.tag == "Player")
              {
-                 val = true;
+                val = true;
              }
              else
              {

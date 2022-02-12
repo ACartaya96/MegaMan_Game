@@ -11,10 +11,17 @@ public class EnemyController : MonoBehaviour
     public int currentHealth;
     public int maxHealth = 1;
     public int contactDamage = 1;
+    public int bulletDamage = 1;
+    public int bulletSpeed = 1;
 
     RigidbodyConstraints2D rbConstraints;
     Animator animator;
     Rigidbody2D rb;
+    public AudioClip shootBulletClip;
+    public GameObject bulletPrefab;
+    public Transform bulletShootPos;
+    
+
 
     // Start is called before the first frame update
     void Start()
@@ -77,6 +84,7 @@ public class EnemyController : MonoBehaviour
     {
         Destroy(gameObject);
         GameManager.Instance.AddScorePoints(this.enemyPoints);
+        GameManager.Instance.enemyCount--;
     }
 
     private void OnTriggerStay2D(Collider2D other)

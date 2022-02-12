@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     bool isTakingDamage;
    
     bool hitSideRight;
-    bool isInvincible;
+    public bool isInvincible;
 
     bool freezeInput;
     bool freezePlayer;
@@ -53,6 +53,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator =GetComponent<Animator>();
         isFacingRight = true;
+        isInvincible = false;
         currentHealth =maxHealth;
     }
 
@@ -116,13 +117,14 @@ public class PlayerController : MonoBehaviour
 
     void ShootBullet()
     {
-        GameObject bullet = Instantiate(bulletPrefab, bulletPos.position, Quaternion.identity );
-        
+        GameObject bullet = Instantiate(bulletPrefab, bulletPos.position, Quaternion.identity);
+
         bullet.name = bulletPrefab.name;
-        
+
         bullet.GetComponent<Bullet_Script>().SetDamageValue(bulletDamage);
         bullet.GetComponent<Bullet_Script>().SetBulletSpeed(bulletSpeed);
-        bullet.GetComponent<Bullet_Script>().SetBulletDirection((isFacingRight) ? Vector2.right : Vector2.left );
+        bullet.GetComponent<Bullet_Script>().SetBulletDirection((isFacingRight) ? Vector2.right : Vector2.left);
+        bullet.GetComponent<Bullet_Script>().SetCollideWithTags("Enemy");
         bullet.GetComponent<Bullet_Script>().Shoot();
 
        // SoundManager.Instance.Play(shootBulletClip);
@@ -278,10 +280,11 @@ public class PlayerController : MonoBehaviour
     {
         if (!isInvincible)
         {
-            currentHealth -=damage;
+            currentHealth -= damage;
             currentHealth = Mathf.Clamp(currentHealth,0,maxHealth);
-            UIHealthBar.instance.setValue(currentHealth / (float)maxHealth); 
-            if(currentHealth <= 0)
+            UIHealthBar.instance.setValue(currentHealth / (float)maxHealth);
+            
+            if (currentHealth <= 0)
             {
                 Defeat();
             }
@@ -301,6 +304,7 @@ public class PlayerController : MonoBehaviour
             float hitForceY = 1.5f;
             if(hitSideRight) hitForceX = -hitForceX;
             rb.velocity = Vector2.zero;
+            animator.Play("Player_Hit", -1, 0f);
             rb.AddForce(new Vector2(hitForceX, hitForceY),ForceMode2D.Impulse);
             //SoundManager.Instance.Play(takingDamageClip);
         }
@@ -337,6 +341,23 @@ public class PlayerController : MonoBehaviour
             rb.constraints = rbConstraints;
             animator.speed = 1;
 
+        }
+    }
+
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Spawn Zones"))
+        {
+            GameManager.Instance.SpawnEnemies(collision.gameObject);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Spawn Zones"))
+        {
+            GameManager.Instance.DespawnEnemies();
         }
     }
 }

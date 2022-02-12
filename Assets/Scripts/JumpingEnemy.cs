@@ -39,7 +39,8 @@ public class JumpingEnemy : MonoBehaviour
     [SerializeField] MoveDirections moveDirection = MoveDirections.Left;
 
     // Start is called before the first frame update
-    void Start()
+
+    private void Awake()
     {
         enemyController = GetComponent<EnemyController>();
         rb = enemyController.GetComponent<Rigidbody2D>();
@@ -48,13 +49,20 @@ public class JumpingEnemy : MonoBehaviour
 
         isFacingRight = true;
         isJumping = false;
-        if(moveDirection == MoveDirections.Left)
+        if (moveDirection == MoveDirections.Left)
         {
             isFacingRight = false;
             enemyController.Flip();
         }
 
         jumpPattern = null;
+    }
+
+
+
+    void Start()
+    {
+        
     }
 
     private void FixedUpdate()

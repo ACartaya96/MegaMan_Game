@@ -7,7 +7,9 @@ public class Bullet_Script : MonoBehaviour
     Rigidbody2D rb;
     SpriteRenderer sprite;
     Animator animator;
-    
+
+
+    string tag;
 
     float destroyTime;
 
@@ -75,12 +77,28 @@ public class Bullet_Script : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("Enemy"))
+
+        
+      
+        
+        if (other.gameObject.CompareTag(tag))
         {
-            EnemyController enemy = other.gameObject.GetComponent<EnemyController>();
-            if(enemy != null)
+           
+            if(tag != null)
             {
-                enemy.TakeDamage(this.damage);
+                Debug.Log(tag);
+                if(tag == "Player")
+                {
+                    PlayerController player = other.gameObject.GetComponent<PlayerController>();
+                    Debug.Log(damage);
+                    player.TakeDamage(this.damage);
+                }
+                else
+                {
+                    EnemyController enemy = other.gameObject.GetComponent<EnemyController>();
+                    enemy.TakeDamage(this.damage);
+                }
+               
             }
             Destroy(gameObject, 0.01f);
         }
@@ -89,6 +107,11 @@ public class Bullet_Script : MonoBehaviour
             Destroy(gameObject, 0.01f);
         }
         
+    }
+
+    public void SetCollideWithTags(string setTag)
+    {
+        this.tag = setTag;
     }
 
     // Update is called once per frame

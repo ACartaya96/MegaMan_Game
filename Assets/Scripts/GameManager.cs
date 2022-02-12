@@ -14,6 +14,9 @@ public class GameManager : MonoBehaviour
     bool initReadyScreen;
 
     int playerScore;
+    public int enemyCount = 0;
+    int spawnCount = 0;
+    int spawner = 0;
 
     float gameRestartTime;
     float gamePlayerReadyTime;
@@ -23,6 +26,12 @@ public class GameManager : MonoBehaviour
 
     TextMeshProUGUI playerScoreText;
     TextMeshProUGUI screenMessageText;
+
+    Vector3 worldLeft;
+    Vector3 worldRight;
+
+  [SerializeField] GameObject[] enemyPrefab;
+  [SerializeField] GameObject[] spawnPoints;
 
     private void Awake()
     {
@@ -47,9 +56,9 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(playerReady)
+        if (playerReady)
         {
-            if(initReadyScreen)
+            if (initReadyScreen)
             {
                 FreezePlayer(true);
                 FreezeEnemies(true);
@@ -61,7 +70,7 @@ public class GameManager : MonoBehaviour
             }
 
             gamePlayerReadyTime -= Time.deltaTime;
-            if(gamePlayerReadyTime < 0)
+            if (gamePlayerReadyTime < 0)
             {
                 FreezePlayer(false);
                 FreezeEnemies(false);
@@ -71,24 +80,26 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        if(playerScoreText != null)
+        if (playerScoreText != null)
         {
             playerScoreText.text = String.Format("<mspace=\"{0}\">{1:0000000}</mspace>", playerScoreText.fontSize,
                     playerScore);
         }
 
-        if(!isGameOver)
+        if (!isGameOver)
         {
             RepositionEnemies();
         }
         else
         {
             gameRestartTime -= Time.deltaTime;
-            if(gameRestartTime < 0)
+            if (gameRestartTime < 0)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
         }
+        worldLeft = Camera.main.ViewportToWorldPoint(new Vector3(-0.1f, 0, 0));
+        worldRight = Camera.main.ViewportToWorldPoint(new Vector3(1.1f, 0, 0));
     }
 
     private void OnEnable()
@@ -135,7 +146,7 @@ public class GameManager : MonoBehaviour
     private void FreezeEnemies(bool freeze)
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        foreach(GameObject enemy in enemies)
+        foreach (GameObject enemy in enemies)
         {
             enemy.GetComponent<EnemyController>().FreezeEnemy(freeze);
         }
@@ -144,25 +155,28 @@ public class GameManager : MonoBehaviour
     private void FreezeBullets(bool freeze)
     {
         GameObject[] bullets = GameObject.FindGameObjectsWithTag("Bullets");
-        foreach(GameObject bullet in bullets)
+        foreach (GameObject bullet in bullets)
         {
             bullet.GetComponent<Bullet_Script>().FreezeBullet(freeze);
         }
     }
     private void RepositionEnemies()
     {
-        Vector3 worldLeft = Camera.main.ViewportToWorldPoint(new Vector3(-0.1f, 0, 0));
-        Vector3 worldRight = Camera.main.ViewportToWorldPoint(new Vector3(1.1f, 0, 0));
 
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        foreach(GameObject enemy in enemies)
+
+        foreach (GameObject enemy in enemies)
         {
-            if(enemy.transform.position.x < worldLeft.x)
+
+            if (enemy.transform.position.x < worldLeft.x)
             {
+
                 switch (enemy.name)
                 {
                     case "HomingEnemy":
-                        enemy.transform.position = new Vector3(worldRight.x, UnityEngine.Random.Range(-1.0f, 1.0f), 0);
+
+                        enemy.transform.position = new Vector3(worldRight.x, player.transform.position.y + UnityEngine.Random.Range(-0.1f, 2.0f), 0);
                         enemy.GetComponent<HomingEnemy>().ResetFollowingPath();
                         enemy.GetComponent<HomingEnemy>().state = 0;
                         break;
@@ -171,21 +185,95 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void SpawnEnemies()
+    public void SpawnEnemies(GameObject spawnZone)
     {
-        GameObject spawnZone = GameObject.FindGameObjectWithTag("Spawn Zones");
-        switch(spawnZone.name)
+        
+
+        if (!playerReady)
         {
-            case "Floor 1":
-                GameObject [] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-                foreach(GameObject enemy in enemies)
-                {
-                    if (enemies.Length < 6)
+
+            switch (spawnZone.name)
+            {
+                case "Floor 1":
+                    if (enemyCount < 1)
                     {
-                       
+                        StartCoroutine(CallSpawner(enemyPrefab[0]));
+                        enemyCount++;
                     }
-                }
-                break;
+                    break;
+                case "Climb 1":
+                    if (spawnCount < 12)
+                    {
+                        for (int x = 0; x < 12; x++)
+                        { 
+                            StartCoroutine(CallSpawner(enemyPrefab[1]));
+                            spawnCount++;
+                        }
+                    }
+                    break;
+            }
+
         }
     }
+
+    IEnumerator CallSpawner(GameObject enemy)
+    {
+        yield return new WaitForSeconds(1f);
+        SpawnPrefab(enemy);
+    }
+
+    private void SpawnPrefab(GameObject enemy)
+    {
+        switch (enemy.name)
+        {
+            case "HomingEnemy":
+                GameObject player = GameObject.FindGameObjectWithTag("Player");
+                GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+                Vector3 spawnPos = new Vector3(worldRight.x, player.transform.position.y + UnityEngine.Random.Range(-0.1f, 2.0f), 0);
+
+
+                GameObject homing = Instantiate(enemyPrefab[0], spawnPos, Quaternion.identity);
+                homing.name = enemy.name;
+                break;
+            case "BlasterEnemy":
+                GameObject blaster = Instantiate(enemyPrefab[1], spawnPoints[spawner].transform.position,Quaternion.identity);
+                blaster.name = enemy.name;
+                switch (spawnPoints[spawner].name)
+                {
+                    case "Left":
+                        blaster.GetComponent<BlasterEnemyController>().blasterOrientation = BlasterEnemyController.BlasterOrientation.Left;
+                        break;
+                    case "Right":
+                        blaster.GetComponent<BlasterEnemyController>().blasterOrientation = BlasterEnemyController.BlasterOrientation.Right;
+                        break;
+                    case "Bottom":
+                        blaster.GetComponent<BlasterEnemyController>().blasterOrientation = BlasterEnemyController.BlasterOrientation.Bottom;
+                        break;
+                    case "Top":
+                        blaster.GetComponent<BlasterEnemyController>().blasterOrientation = BlasterEnemyController.BlasterOrientation.Top;
+                        break;
+                }
+                spawner++;
+                break;
+        }
+
+    }
+
+
+    public void DespawnEnemies()
+    {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        
+        foreach (GameObject enemy in enemies)
+        {
+            if (worldLeft.x < enemy.transform.position.x)
+            {
+                Destroy(enemy.gameObject);
+                enemyCount = 0;
+                spawnCount = 0;
+            }
+        }
+    }
+
 }
