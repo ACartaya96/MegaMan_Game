@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     Vector3 worldRight;
 
   [SerializeField] GameObject[] enemyPrefab;
-  [SerializeField] GameObject[] spawnPoints;
+  
 
     private void Awake()
     {
@@ -237,9 +237,9 @@ public class GameManager : MonoBehaviour
                 homing.name = enemy.name;
                 break;
             case "BlasterEnemy":
-                GameObject blaster = Instantiate(enemyPrefab[1], spawnPoints[spawner].transform.position,Quaternion.identity);
+                GameObject blaster = Instantiate(enemyPrefab[1], SpawnContrroller.Instance.spawnPoints[spawner].transform.position,Quaternion.identity);
                 blaster.name = enemy.name;
-                switch (spawnPoints[spawner].name)
+                switch (SpawnContrroller.Instance.spawnPoints[spawner].name)
                 {
                     case "Left":
                         blaster.GetComponent<BlasterEnemyController>().blasterOrientation = BlasterEnemyController.BlasterOrientation.Left;
@@ -274,6 +274,16 @@ public class GameManager : MonoBehaviour
                 spawnCount = 0;
             }
         }
+    }
+
+    public void PlayGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 
 }

@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] AudioClip jumpLandedClip;
     [SerializeField] AudioClip shootBulletClip;
     [SerializeField] AudioClip takingDamageClip;
+    [SerializeField] AudioClip walkingClip;
+
     [SerializeField] AudioClip explodeEffectClip;
 
     bool jumpPressed;
@@ -38,6 +40,8 @@ public class PlayerController : MonoBehaviour
     public float lowJumpMultiplier = 1.5f;
     public int currentHealth;
     public int maxHealth =28;
+    public int bulletIndex = 0;
+    public int maxBullets = 3;
 
     float shootTime;
     float horizontal;
@@ -54,7 +58,7 @@ public class PlayerController : MonoBehaviour
         animator =GetComponent<Animator>();
         isFacingRight = true;
         isInvincible = false;
-        currentHealth =maxHealth;
+        currentHealth = maxHealth;
     }
 
     // Update is called once per frame
@@ -69,6 +73,7 @@ public class PlayerController : MonoBehaviour
        PlayerDirectionInput();
        PlayerShootInput();
        PlayerMovement();
+        
     }
 
     private void FixedUpdate()
@@ -119,15 +124,15 @@ public class PlayerController : MonoBehaviour
     {
         GameObject bullet = Instantiate(bulletPrefab, bulletPos.position, Quaternion.identity);
 
-        bullet.name = bulletPrefab.name;
-
         bullet.GetComponent<Bullet_Script>().SetDamageValue(bulletDamage);
         bullet.GetComponent<Bullet_Script>().SetBulletSpeed(bulletSpeed);
         bullet.GetComponent<Bullet_Script>().SetBulletDirection((isFacingRight) ? Vector2.right : Vector2.left);
         bullet.GetComponent<Bullet_Script>().SetCollideWithTags("Enemy");
         bullet.GetComponent<Bullet_Script>().Shoot();
+        
+        
 
-       // SoundManager.Instance.Play(shootBulletClip);
+       SoundManager.Instance.Play(shootBulletClip);
     }
 
     void PlayerDirectionInput()
@@ -155,7 +160,8 @@ public class PlayerController : MonoBehaviour
                else
                {
                    animator.Play("Player_Run");
-               }
+                   SoundManager.Instance.Play(walkingClip);
+                }
            }
             rb.velocity = new Vector2(-speed, rb.velocity.y);
             
@@ -175,6 +181,7 @@ public class PlayerController : MonoBehaviour
                else
                {
                    animator.Play("Player_Run");
+                    SoundManager.Instance.Play(walkingClip); 
                }
            }
             rb.velocity = new Vector2(speed, rb.velocity.y);
@@ -206,7 +213,7 @@ public class PlayerController : MonoBehaviour
                {
                    animator.Play("Player_Jump");
                }
-            rb.velocity = new Vector2(rb.velocity.x, jumpHeight); //jump heght should be 4.875f
+            rb.velocity = new Vector2(rb.velocity.x, jumpHeight); //jump height should be 4.875f
         }
         if (!isGrounded)
         {
@@ -241,15 +248,16 @@ public class PlayerController : MonoBehaviour
 
         if (!freezeInput)
         {
-            keyShoot = Input.GetKeyDown(KeyCode.C); // enter key
+           keyShoot = Input.GetKeyDown(KeyCode.C); // enter key
         }
 
         if(keyShoot && keyShootRelease )
-        {
-            isShooting =true;
-            keyShootRelease = false;
-            shootTime = Time.time;
-            Invoke("ShootBullet",0.01f);
+        { 
+                isShooting = true;
+                keyShootRelease = false;
+                shootTime = Time.time;
+                Invoke("ShootBullet", 0.01f);
+          
         }
         if(!keyShoot && !keyShootRelease)
         {
@@ -306,7 +314,7 @@ public class PlayerController : MonoBehaviour
             rb.velocity = Vector2.zero;
             animator.Play("Player_Hit", -1, 0f);
             rb.AddForce(new Vector2(hitForceX, hitForceY),ForceMode2D.Impulse);
-            //SoundManager.Instance.Play(takingDamageClip);
+            SoundManager.Instance.Play(takingDamageClip);
         }
     }
     void StopDamageAnimation()

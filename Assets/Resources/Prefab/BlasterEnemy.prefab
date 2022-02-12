@@ -300,8 +300,11 @@ MonoBehaviour:
   maxHealth: 1
   contactDamage: 1
   bulletDamage: 2
-  bulletSpeed: 8
-  shootBulletClip: {fileID: 0}
+  bulletSpeed: 6
+  enemyHit: {fileID: 8300000, guid: a80770c020c31d242af546e8267eaa65, type: 3}
+  enemyDie: {fileID: 8300000, guid: 994e15dc0ed6e0241a6e1dfb35d1e808, type: 3}
+  enemyDink: {fileID: 8300000, guid: 3303a434039eea74f9ddcd2ad08a0b39, type: 3}
+  shootBulletClip: {fileID: 8300000, guid: c9ce6db58a5910b47874553fdb9f6708, type: 3}
   bulletPrefab: {fileID: 6206260289790554311, guid: 84ed7dbdedbd39c4ba2c689d32282bac, type: 3}
   bulletShootPos: {fileID: 630824375049770965}
 --- !u!114 &5243395293532172947
@@ -317,7 +320,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   closedDelay: 2
-  playerRange: 4
+  playerRange: 8
   blasterState: 0
   blasterOrientation: 3
 --- !u!1 &5232389818669145637

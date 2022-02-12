@@ -126,6 +126,14 @@ MonoBehaviour:
   currentHealth: 0
   maxHealth: 1
   contactDamage: 3
+  bulletDamage: 1
+  bulletSpeed: 1
+  enemyHit: {fileID: 8300000, guid: a80770c020c31d242af546e8267eaa65, type: 3}
+  enemyDie: {fileID: 8300000, guid: 994e15dc0ed6e0241a6e1dfb35d1e808, type: 3}
+  enemyDink: {fileID: 8300000, guid: 3303a434039eea74f9ddcd2ad08a0b39, type: 3}
+  shootBulletClip: {fileID: 8300000, guid: c9ce6db58a5910b47874553fdb9f6708, type: 3}
+  bulletPrefab: {fileID: 0}
+  bulletShootPos: {fileID: 0}
 --- !u!114 &220409467102880098
 MonoBehaviour:
   m_ObjectHideFlags: 0

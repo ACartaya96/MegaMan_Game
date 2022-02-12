@@ -92,6 +92,7 @@ public class Bullet_Script : MonoBehaviour
                     PlayerController player = other.gameObject.GetComponent<PlayerController>();
                     Debug.Log(damage);
                     player.TakeDamage(this.damage);
+                   
                 }
                 else
                 {
@@ -106,7 +107,7 @@ public class Bullet_Script : MonoBehaviour
         {
             Destroy(gameObject, 0.01f);
         }
-        
+       
     }
 
     public void SetCollideWithTags(string setTag)
@@ -119,9 +120,11 @@ public class Bullet_Script : MonoBehaviour
     {
         if (freezeBullet) return;
 
+  
         destroyTime -= Time.deltaTime;
         if(destroyTime < 0)
         {
+           
             Destroy(gameObject);
         }
 

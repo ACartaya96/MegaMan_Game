@@ -17,6 +17,11 @@ public class EnemyController : MonoBehaviour
     RigidbodyConstraints2D rbConstraints;
     Animator animator;
     Rigidbody2D rb;
+
+    [SerializeField] AudioClip enemyHit;
+    [SerializeField] AudioClip enemyDie;
+    [SerializeField] AudioClip enemyDink;
+
     public AudioClip shootBulletClip;
     public GameObject bulletPrefab;
     public Transform bulletShootPos;
@@ -49,14 +54,20 @@ public class EnemyController : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        if(!isInvincible)
+        if (!isInvincible)
         {
             currentHealth -= damage;
             currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-            if(currentHealth <= 0)
+            if (currentHealth <= 0)
             {
                 Defeated();
             }
+
+            SoundManager.Instance.Play(enemyHit);
+        }
+        else
+        {
+            SoundManager.Instance.Play(enemyDink);
         }
     }
 
@@ -82,6 +93,7 @@ public class EnemyController : MonoBehaviour
 
     void Defeated()
     {
+        SoundManager.Instance.Play(enemyDie);
         Destroy(gameObject);
         GameManager.Instance.AddScorePoints(this.enemyPoints);
         GameManager.Instance.enemyCount--;
