@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5839676054538296807}
   - component: {fileID: 5839676054538296800}
   - component: {fileID: 5670480175423986822}
+  - component: {fileID: 7670323645480110952}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -55,7 +56,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 469d313da66e25945bc3bb13fe8f4687, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -100,7 +101,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0011924505, y: 0.24919939}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -111,7 +112,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.44436902, y: 0.5016012}
   m_EdgeRadius: 0
 --- !u!50 &5839676054538296807
 Rigidbody2D:
@@ -143,21 +144,37 @@ MonoBehaviour:
   m_GameObject: {fileID: 5839676054538296801}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b55a890d063617641ad2b9020f187c74, type: 3}
+  m_Script: {fileID: 11500000, guid: 300620a126b2ede4cbcf30d7c240dd49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPos: {fileID: 5839676056593034747}
   bulletPrefab: {fileID: 6206260289790554311, guid: 84ed7dbdedbd39c4ba2c689d32282bac, type: 3}
+  jumpLandedClip: {fileID: 8300000, guid: f91f2c59c6dd4e44d87322dbf83441b8, type: 3}
+  shootBulletClip: {fileID: 8300000, guid: da54cf9ce8f02fb498dc56385753d95e, type: 3}
+  takingDamageClip: {fileID: 8300000, guid: 373f728abd28585489fb89bbce5b9d44, type: 3}
+  walkingClip: {fileID: 8300000, guid: 2ca37f2d7aa38dd4db35052b5c8bba8a, type: 3}
+  explodeEffectClip: {fileID: 0}
   keyShoot: 0
   keyShootRelease: 1
+  isInvincible: 0
+  playerWeapon: 0
+  playerWeaponStructs:
+  - weapon: 0
+    currentEnergy: 28
+    maxEnergy: 28
+  - weapon: 1
+    currentEnergy: 28
+    maxEnergy: 28
   bulletDamage: 1
   bulletSpeed: 5
-  fallMultiplier: 2
-  lowJumpMultiplier: 2.5
+  fallMultiplier: 2.5
+  lowJumpMultiplier: 1.5
   currentHealth: 0
   maxHealth: 28
-  speed: 8
-  jumpHeight: 8
+  bulletIndex: 0
+  maxBullets: 3
+  speed: 0
+  jumpHeight: 0
 --- !u!95 &5670480175423986822
 Animator:
   serializedVersion: 3
@@ -177,6 +194,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7670323645480110952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5839676054538296801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb312b61d57d0414490a7c96bf4d8227, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5839676056593034724
 GameObject:
   m_ObjectHideFlags: 0
