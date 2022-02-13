@@ -97,14 +97,19 @@ public class Bullet_Script : MonoBehaviour
                 else
                 {
                     EnemyController enemy = other.gameObject.GetComponent<EnemyController>();
+                    GameObject player = GameObject.FindGameObjectWithTag("Player");
+                    player.GetComponent<PlayerController>().bulletIndex -= player.GetComponent<PlayerController>().bulletIndex;
                     enemy.TakeDamage(this.damage);
                 }
                
             }
+            
             Destroy(gameObject, 0.01f);
         }
         else if(other.gameObject.CompareTag("Floor"))
         {
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            player.GetComponent<PlayerController>().bulletIndex -= player.GetComponent<PlayerController>().bulletIndex;
             Destroy(gameObject, 0.01f);
         }
        
@@ -124,7 +129,8 @@ public class Bullet_Script : MonoBehaviour
         destroyTime -= Time.deltaTime;
         if(destroyTime < 0)
         {
-           
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            player.GetComponent<PlayerController>().bulletIndex -= player.GetComponent<PlayerController>().bulletIndex;
             Destroy(gameObject);
         }
 

@@ -115,6 +115,9 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        Debug.Log("Grounded" + isGrounded.ToString());
+        Debug.Log("Climbing" + isClimbing.ToString());
+        Debug.Log("StartedClimbing" + hasStartedClimbing.ToString());
 
         if (isTakingDamage)
         {
@@ -143,7 +146,15 @@ public class PlayerController : MonoBehaviour
         raycastHit = Physics2D.BoxCast(box_orgin, box_size, 0f, Vector2.down, raycastDistance, layerMask);
         if (raycastHit.collider != null)
         {
-            isGrounded = true;
+            if(isClimbing)
+            {
+              isGrounded = false;
+            }
+            else
+            {
+               isGrounded = true;
+            }
+  
             if (isJumping)
             {
                 SoundManager.Instance.Play(jumpLandedClip);
@@ -224,6 +235,7 @@ public class PlayerController : MonoBehaviour
         bullet.GetComponent<Bullet_Script>().SetBulletDirection((isFacingRight) ? Vector2.right : Vector2.left);
         bullet.GetComponent<Bullet_Script>().SetCollideWithTags("Enemy");
         bullet.GetComponent<Bullet_Script>().Shoot();
+        bulletIndex++;
 
 
 
@@ -245,6 +257,7 @@ public class PlayerController : MonoBehaviour
         transformHY = transformY + climbSpriteHeight;
         if (isClimbing)
         {
+           
             //debug lines
             Debug.DrawLine(new Vector3(ladder.posX - 2f, ladder.posTopHandlerY, 0),
                 new Vector3(ladder.posX + 2f, ladder.posTopHandlerY, 0), Color.blue);
@@ -294,12 +307,12 @@ public class PlayerController : MonoBehaviour
                     else if (isGrounded && !hasStartedClimbing)
                     {
                         isJumping = false;
-                        animator.Play("idle");
+                        animator.Play("Player_Idle");
                         transform.position = new Vector2(ladder.posX, ladder.posBottomY - 0.005f);
                         if (!atLaddersEnd)
                         {
                             atLaddersEnd = true;
-                            Invoke("ResetClimbing", .01f);
+                            Invoke("ResetClimbing", .05f);
                         }
                     }
                     else
@@ -537,7 +550,7 @@ public class PlayerController : MonoBehaviour
 
         if (!freezeInput)
         {
-           keyShoot = Input.GetKeyDown(KeyCode.B); // enter key
+           keyShoot = Input.GetButtonDown("Primary Fire"); // enter key
         }
 
         if(keyShoot && keyShootRelease )
@@ -545,7 +558,11 @@ public class PlayerController : MonoBehaviour
                 isShooting = true;
                 keyShootRelease = false;
                 shootTime = Time.time;
+            bulletIndex = Mathf.Clamp(bulletIndex, 0, maxBullets);
+            if (bulletIndex < 3)
+            {
                 Invoke("ShootBullet", 0.01f);
+            }
           
         }
         if(!keyShoot && !keyShootRelease)
@@ -642,6 +659,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Spawn Zones"))
+        {
+            GameManager.Instance.SpawnEnemies(collision.gameObject);
+        }
+    }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Spawn Zones"))

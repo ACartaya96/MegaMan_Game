@@ -9,6 +9,8 @@ public class LadderScript : MonoBehaviour
     public float handlerTopOffset = 0.04f;
     public float handlerBottomOffset = 0.04f;
 
+
+
     // flag to let the player know that climbing is possible
     [HideInInspector] public bool isNearLadder;
 
@@ -22,6 +24,19 @@ public class LadderScript : MonoBehaviour
 
     void Awake()
     {
+
+        /*float width = GetComponent<SpriteRenderer>().size.x;
+        float height = GetComponent<SpriteRenderer>().size.y;
+        Transform topHandler = transform.GetChild(0).transform;
+        Transform bottomHandler = transform.GetChild(1).transform;
+        topHandler.position = new Vector3(transform.position.x, transform.position.y + (height / 2), 0);
+        bottomHandler.position = new Vector3(transform.position.x, transform.position.y - (height / 2), 0);
+        GetComponent<BoxCollider2D>().offset = Vector2.zero;
+        GetComponent<BoxCollider2D>().size = new Vector2(width, height);*/
+    
+
+
+        
         // set up the positioning
         GetComponent<BoxCollider2D>().offset = Vector2.zero;
         Vector2 size = GetComponent<BoxCollider2D>().size;
@@ -58,7 +73,7 @@ public class LadderScript : MonoBehaviour
         {
             // outside of the trigger then no ladder to climb
             isNearLadder = false;
-            other.gameObject.GetComponent<PlayerController>().ladder = null;
+           // other.gameObject.GetComponent<PlayerController>().ladder = null;
         }
     }
 }

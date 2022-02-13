@@ -118,10 +118,10 @@ public class BlasterEnemyController : MonoBehaviour
                 bulletVectors[bulletIndex].x *= -1;
                 break;
             case BlasterOrientation.Top:
-                bulletVectors[bulletIndex] = UtilityFunction.RotateByAngle(bulletVectors[bulletIndex], 90f);
+                bulletVectors[bulletIndex] = UtilityFunction.RotateByAngle(bulletVectors[bulletIndex], -90f);
                 break;
             case BlasterOrientation.Bottom:
-                bulletVectors[bulletIndex] = UtilityFunction.RotateByAngle(bulletVectors[bulletIndex], -90f);
+                bulletVectors[bulletIndex] = UtilityFunction.RotateByAngle(bulletVectors[bulletIndex], 90f);
                 break;
         }
         //Needs code

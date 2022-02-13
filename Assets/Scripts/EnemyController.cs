@@ -17,6 +17,7 @@ public class EnemyController : MonoBehaviour
     RigidbodyConstraints2D rbConstraints;
     Animator animator;
     Rigidbody2D rb;
+    BoxCollider2D box;
 
     [SerializeField] AudioClip enemyHit;
     [SerializeField] AudioClip enemyDie;
@@ -33,6 +34,7 @@ public class EnemyController : MonoBehaviour
     {
         currentHealth = maxHealth;
         rb = GetComponent<Rigidbody2D>();
+        box = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
     }
 
@@ -100,7 +102,7 @@ public class EnemyController : MonoBehaviour
         GameManager.Instance.enemyCount = Mathf.Clamp(GameManager.Instance.enemyCount, 0, 1);
     }
 
-    private void OnTriggerStay2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.CompareTag("Player"))
         {

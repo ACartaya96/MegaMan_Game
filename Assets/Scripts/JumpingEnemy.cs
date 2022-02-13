@@ -14,7 +14,7 @@ public class JumpingEnemy : MonoBehaviour
     bool isJumping;
 
     float jumpTimer;
-    float jumpDelay = 0.25f;
+    float jumpDelay = 1f;
 
     int jumpPatternIndex;
     int[] jumpPattern;
@@ -36,7 +36,7 @@ public class JumpingEnemy : MonoBehaviour
     public AudioClip jumpLandedClip;
 
     public enum MoveDirections {Left, Right};
-    [SerializeField] MoveDirections moveDirection = MoveDirections.Left;
+    [SerializeField] MoveDirections moveDirection = MoveDirections.Right;
 
     // Start is called before the first frame update
 
@@ -58,12 +58,6 @@ public class JumpingEnemy : MonoBehaviour
         jumpPattern = null;
     }
 
-
-
-    void Start()
-    {
-        
-    }
 
     private void FixedUpdate()
     {
@@ -96,7 +90,7 @@ public class JumpingEnemy : MonoBehaviour
         Debug.DrawRay(box_orgin - new Vector3(box.bounds.extents.x, 0), 
             Vector2.down * (box.bounds.extents.y / 4f + raycastDistance), raycastColor);
         Debug.DrawRay(box_orgin - new Vector3(box.bounds.extents.x, box.bounds.extents.y / 4f + raycastDistance), 
-            Vector2.down * (box.bounds.extents.x * 2), raycastColor);
+            Vector2.right * (box.bounds.extents.x * 2), raycastColor);
 
       
     }
@@ -112,7 +106,7 @@ public class JumpingEnemy : MonoBehaviour
 
         if(isGrounded)
         {
-            animator.Play("JumpingEnemy_Grounded");
+            animator.Play("Jumping_Grounded");
             rb.velocity = new Vector2(0, rb.velocity.y);
             jumpTimer -= Time.deltaTime;
             if(jumpTimer < 0)
@@ -138,10 +132,10 @@ public class JumpingEnemy : MonoBehaviour
         }
         else
         {
-            animator.Play("JumpingEnemy_Jumping");
+          
             rb.velocity = new Vector2(jumpVelocity.x, rb.velocity.y);
             isJumping = true;
-            if(jumpVelocity.x < 0)
+            if(jumpVelocity.x <= 0)
             {
                 if(isFacingRight)
                 {
@@ -157,6 +151,7 @@ public class JumpingEnemy : MonoBehaviour
                     enemyController.Flip();
                 }
             }
+            animator.Play("Jumping_Jump");
         }
 
     }

@@ -202,12 +202,22 @@ public class GameManager : MonoBehaviour
                     }
                     break;
                 case "Climb 1":
-                    Debug.Log(spawnCount);
+                   
                     if (spawnCount < 15)
                     {
                         for (int x = 0; x < 15; x++)
                         { 
                             StartCoroutine(CallSpawner(enemyPrefab[1]));
+                            spawnCount++;
+                        }
+                    }
+                    break;
+                case "Floor 2":
+                    if(spawnCount < 2)
+                    {
+                        for(int x = 0; x < 2; x++)
+                        {
+                            StartCoroutine(CallSpawner(enemyPrefab[2]));
                             spawnCount++;
                         }
                     }
@@ -255,6 +265,10 @@ public class GameManager : MonoBehaviour
                         blaster.GetComponent<BlasterEnemyController>().blasterOrientation = BlasterEnemyController.BlasterOrientation.Top;
                         break;
                 }
+                spawner++;
+                break;
+                case "JumpingEnemy":
+                GameObject jumping = Instantiate(enemy.gameObject, SpawnContrroller.Instance.spawnPoints[spawner + 15].transform.position, Quaternion.identity);
                 spawner++;
                 break;
         }
