@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Explosion
   - Spawn Zones
+  - Ladder
   layers:
   - Default
   - TransparentFX
@@ -44,6 +45,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Ladder
+    uniqueID: 1089437939
     locked: 0
   - name: Player
     uniqueID: 2353252901

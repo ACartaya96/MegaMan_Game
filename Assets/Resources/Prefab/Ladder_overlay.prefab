@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1851060412206948958}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.9, z: 0}
+  m_LocalPosition: {x: 0, y: -2.997, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4770515662116554897}
@@ -54,7 +54,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2471570079697048565}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.98, z: 0}
+  m_LocalPosition: {x: 0, y: 4.821, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4770515662116554897}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 4770515662116554899}
   - component: {fileID: 4770515662116554892}
   - component: {fileID: 223128559680988681}
-  - component: {fileID: 4344131454406760728}
+  - component: {fileID: 1262263113916238176}
   m_Layer: 0
   m_Name: Ladder_overlay
   m_TagString: Ladder
@@ -156,16 +156,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb86664acf7e3394e95cd93e71da0ede, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  handlerTopOffset: 0.04
-  handlerBottomOffset: 0.04
+  handlerTopOffset: 0
+  handlerBottomOffset: 0.4
   isNearLadder: 0
-  posX: 0
-  posTopY: 0
-  posBottomY: 0
-  posTopHandlerY: 0
-  posBottomHandlerY: 0
-  posPlatformY: 0
---- !u!212 &4344131454406760728
+  posX: -2.5
+  posTopY: 5.994
+  posBottomY: -0.006000042
+  posTopHandlerY: 5.994
+  posBottomHandlerY: -0.006000042
+  posPlatformY: 5.494
+--- !u!212 &1262263113916238176
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -202,8 +202,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1089437939
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 24e0e30e6af67264c9386c4b7e5cdd62, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -227,8 +227,7 @@ GameObject:
   - component: {fileID: 4770515663262114773}
   - component: {fileID: 4770515663262114779}
   - component: {fileID: 4770515663262114772}
-  - component: {fileID: 27266607785362820}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LadderTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -243,7 +242,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4770515663262114774}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.96, z: 0}
+  m_LocalPosition: {x: -0.027, y: 2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4770515662116554897}
@@ -281,33 +280,12 @@ EdgeCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.5}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -0.5, y: 0}
-  - {x: 0.5, y: 0}
+  - {x: -0.8, y: 0}
+  - {x: 0.8, y: 0}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
---- !u!50 &27266607785362820
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4770515663262114774}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0

@@ -153,7 +153,7 @@ public class PlayerController : MonoBehaviour
         raycastColor = (isGrounded) ? Color.green : Color.red;
         Debug.DrawRay(box_orgin + new Vector3(box2d.bounds.extents.x, 0), Vector2.down * (box2d.bounds.extents.y / 4f + raycastDistance), raycastColor);
         Debug.DrawRay(box_orgin - new Vector3(box2d.bounds.extents.x, 0), Vector2.down * (box2d.bounds.extents.y / 4f + raycastDistance), raycastColor);
-        Debug.DrawRay(box_orgin - new Vector3(box2d.bounds.extents.x, box2d.bounds.extents.y / 4f + raycastDistance), Vector2.down * (box2d.bounds.extents.x * 2), raycastColor);
+        Debug.DrawRay(box_orgin - new Vector3(box2d.bounds.extents.x, box2d.bounds.extents.y / 4f + raycastDistance), Vector2.right * (box2d.bounds.extents.x * 2), raycastColor);
         
         if (rb.velocity.y < 0)
         {
@@ -234,7 +234,7 @@ public class PlayerController : MonoBehaviour
     {
         if (!freezeInput)
         {
-            horizontal = Input.GetAxis("Horizontal");
+            horizontal = Input.GetAxisRaw("Horizontal");
             keyVertical = Input.GetAxisRaw("Vertical");
         }
     }
@@ -526,7 +526,8 @@ public class PlayerController : MonoBehaviour
         }
         isClimbingDown = false;
         finishedClimbTransition = true;
-        FreezeInput(true);
+        FreezeInput(false);
+        ResetClimbing();
     }
 
     void PlayerShootInput()
@@ -536,7 +537,7 @@ public class PlayerController : MonoBehaviour
 
         if (!freezeInput)
         {
-           keyShoot = Input.GetKeyDown(KeyCode.C); // enter key
+           keyShoot = Input.GetKeyDown(KeyCode.B); // enter key
         }
 
         if(keyShoot && keyShootRelease )
