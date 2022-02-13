@@ -97,6 +97,7 @@ public class EnemyController : MonoBehaviour
         Destroy(gameObject);
         GameManager.Instance.AddScorePoints(this.enemyPoints);
         GameManager.Instance.enemyCount--;
+        GameManager.Instance.enemyCount = Mathf.Clamp(GameManager.Instance.enemyCount, 0, 1);
     }
 
     private void OnTriggerStay2D(Collider2D other)

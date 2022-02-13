@@ -27122,28 +27122,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyCount: 0
+  spawnCount: 0
+  spawner: 0
   gameRestartDelay: 5
   gamePlayerReadyDelay: 3
   enemyPrefab:
   - {fileID: 220409467102880102, guid: 82df59536df365a4196f31580edd2f85, type: 3}
   - {fileID: 3285093718305915386, guid: 712b51614da74894cb69591f0d951f3b, type: 3}
-  spawningPrefab: {fileID: 0}
-  spawnPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!4 &1028346853
 Transform:
   m_ObjectHideFlags: 0
@@ -32368,7 +32353,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5839676054538296804, guid: 19614198113db1c458984b20e026e1ee, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.37
+      value: 39.88
       objectReference: {fileID: 0}
     - target: {fileID: 5839676054538296804, guid: 19614198113db1c458984b20e026e1ee, type: 3}
       propertyPath: m_LocalPosition.y

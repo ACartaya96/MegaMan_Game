@@ -15,8 +15,8 @@ public class GameManager : MonoBehaviour
 
     int playerScore;
     public int enemyCount = 0;
-    int spawnCount = 0;
-    int spawner = 0;
+    public int spawnCount = 0;
+    public int spawner = 0;
 
     float gameRestartTime;
     float gamePlayerReadyTime;
@@ -202,9 +202,10 @@ public class GameManager : MonoBehaviour
                     }
                     break;
                 case "Climb 1":
-                    if (spawnCount < 12)
+                    Debug.Log(spawnCount);
+                    if (spawnCount < 15)
                     {
-                        for (int x = 0; x < 12; x++)
+                        for (int x = 0; x < 15; x++)
                         { 
                             StartCoroutine(CallSpawner(enemyPrefab[1]));
                             spawnCount++;
@@ -233,11 +234,11 @@ public class GameManager : MonoBehaviour
                 Vector3 spawnPos = new Vector3(worldRight.x, player.transform.position.y + UnityEngine.Random.Range(-0.1f, 2.0f), 0);
 
 
-                GameObject homing = Instantiate(enemyPrefab[0], spawnPos, Quaternion.identity);
+                GameObject homing = Instantiate(enemy.gameObject, spawnPos, Quaternion.identity);
                 homing.name = enemy.name;
                 break;
             case "BlasterEnemy":
-                GameObject blaster = Instantiate(enemyPrefab[1], SpawnContrroller.Instance.spawnPoints[spawner].transform.position,Quaternion.identity);
+                GameObject blaster = Instantiate(enemy.gameObject, SpawnContrroller.Instance.spawnPoints[spawner].transform.position,Quaternion.identity);
                 blaster.name = enemy.name;
                 switch (SpawnContrroller.Instance.spawnPoints[spawner].name)
                 {
@@ -270,10 +271,12 @@ public class GameManager : MonoBehaviour
             if (worldLeft.x < enemy.transform.position.x)
             {
                 Destroy(enemy.gameObject);
-                enemyCount = 0;
-                spawnCount = 0;
+                
             }
         }
+        enemyCount = 0;
+        spawnCount = 0;
+        spawner = 0;
     }
 
     public void PlayGame()
