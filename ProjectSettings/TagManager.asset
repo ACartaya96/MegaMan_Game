@@ -9,6 +9,7 @@ TagManager:
   - Explosion
   - Spawn Zones
   - Ladder
+  - Death Zones
   layers:
   - Default
   - TransparentFX

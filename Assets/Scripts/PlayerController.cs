@@ -632,7 +632,7 @@ public class PlayerController : MonoBehaviour
     }
     void Defeat()
     {
-        Destroy(gameObject);
+        GameManager.Instance.Defeated(gameObject);
     }
 
     public void FreezeInput(bool freeze)
@@ -664,6 +664,10 @@ public class PlayerController : MonoBehaviour
         if(collision.CompareTag("Spawn Zones"))
         {
             GameManager.Instance.SpawnEnemies(collision.gameObject);
+        }
+        if(collision.CompareTag("Death Zones"))
+        {
+            GameManager.Instance.InstantKill();
         }
     }
     private void OnTriggerExit2D(Collider2D collision)

@@ -13,7 +13,8 @@ public class GameManager : MonoBehaviour
     bool playerReady;
     bool initReadyScreen;
 
-    int playerScore;
+    static int playerScore;
+    static int finalScore;
     public int enemyCount = 0;
     public int spawnCount = 0;
     public int spawner = 0;
@@ -30,8 +31,8 @@ public class GameManager : MonoBehaviour
     Vector3 worldLeft;
     Vector3 worldRight;
 
-  [SerializeField] GameObject[] enemyPrefab;
-  
+    [SerializeField] GameObject[] enemyPrefab;
+
 
     private void Awake()
     {
@@ -187,7 +188,7 @@ public class GameManager : MonoBehaviour
 
     public void SpawnEnemies(GameObject spawnZone)
     {
-        
+
 
         if (!playerReady)
         {
@@ -202,20 +203,20 @@ public class GameManager : MonoBehaviour
                     }
                     break;
                 case "Climb 1":
-                   
+
                     if (spawnCount < 15)
                     {
                         for (int x = 0; x < 15; x++)
-                        { 
+                        {
                             StartCoroutine(CallSpawner(enemyPrefab[1]));
                             spawnCount++;
                         }
                     }
                     break;
                 case "Floor 2":
-                    if(spawnCount < 2)
+                    if (spawnCount < 2)
                     {
-                        for(int x = 0; x < 2; x++)
+                        for (int x = 0; x < 2; x++)
                         {
                             StartCoroutine(CallSpawner(enemyPrefab[2]));
                             spawnCount++;
@@ -248,7 +249,7 @@ public class GameManager : MonoBehaviour
                 homing.name = enemy.name;
                 break;
             case "BlasterEnemy":
-                GameObject blaster = Instantiate(enemy.gameObject, SpawnContrroller.Instance.spawnPoints[spawner].transform.position,Quaternion.identity);
+                GameObject blaster = Instantiate(enemy.gameObject, SpawnContrroller.Instance.spawnPoints[spawner].transform.position, Quaternion.identity);
                 blaster.name = enemy.name;
                 switch (SpawnContrroller.Instance.spawnPoints[spawner].name)
                 {
@@ -267,7 +268,7 @@ public class GameManager : MonoBehaviour
                 }
                 spawner++;
                 break;
-                case "JumpingEnemy":
+            case "JumpingEnemy":
                 GameObject jumping = Instantiate(enemy.gameObject, SpawnContrroller.Instance.spawnPoints[spawner + 15].transform.position, Quaternion.identity);
                 spawner++;
                 break;
@@ -279,13 +280,13 @@ public class GameManager : MonoBehaviour
     public void DespawnEnemies()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        
+
         foreach (GameObject enemy in enemies)
         {
             if (worldLeft.x < enemy.transform.position.x)
             {
                 Destroy(enemy.gameObject);
-                
+
             }
         }
         enemyCount = 0;
@@ -295,7 +296,7 @@ public class GameManager : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(1);
     }
 
     public void QuitGame()
@@ -303,4 +304,26 @@ public class GameManager : MonoBehaviour
         Application.Quit();
     }
 
+    public void InstantKill()
+    {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        player.GetComponent<PlayerController>().TakeDamage(player.GetComponent<PlayerController>().maxHealth);
+    }
+
+    public void Defeated(GameObject player)
+    {
+        Destroy(player);
+        SceneManager.LoadScene(3);
+        playerScore = finalScore;
+        TallyScore();
+    }
+
+    private void TallyScore()
+    {
+        playerScore = 0;
+
+
+        playerScore = (int)Mathf.Lerp(playerScore, finalScore, 3 * Time.deltaTime);
+
+    }
 }
