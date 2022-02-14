@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     BoxCollider2D box2d;
     Rigidbody2D rb;
     Animator animator;
-    [SerializeField] ParticleSystem partivlePrefab;
+    [SerializeField] GameObject partivlePrefab;
     [SerializeField] Transform bulletPos;
     [SerializeField] GameObject bulletPrefab;
 
@@ -101,6 +101,7 @@ public class PlayerController : MonoBehaviour
         box2d = GetComponent<BoxCollider2D>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        
         isFacingRight = true;
         isInvincible = false;
         currentHealth = maxHealth;
@@ -633,8 +634,9 @@ public class PlayerController : MonoBehaviour
     }
     void Defeat()
     {
-        partivlePrefab.Play();
-        StartCoroutine(GameManager.Instance.Defeated(gameObject));
+        Instantiate(partivlePrefab, transform.position, Quaternion.identity);
+        Destroy(gameObject, 2f);
+        //StartCoroutine(GameManager.Instance.Defeated(gameObject));
     }
 
     public void FreezeInput(bool freeze)

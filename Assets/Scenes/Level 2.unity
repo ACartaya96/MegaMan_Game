@@ -21743,6 +21743,7 @@ MonoBehaviour:
   spawner: 0
   gameRestartDelay: 5
   gamePlayerReadyDelay: 3
+  explosion: {fileID: 0}
   enemyPrefab:
   - {fileID: 220409467102880102, guid: 82df59536df365a4196f31580edd2f85, type: 3}
   - {fileID: 3285093718305915386, guid: 712b51614da74894cb69591f0d951f3b, type: 3}
@@ -23314,7 +23315,7 @@ PrefabInstance:
     - target: {fileID: 5839676054538296800, guid: 19614198113db1c458984b20e026e1ee, type: 3}
       propertyPath: partivlePrefab
       value: 
-      objectReference: {fileID: 1880703468}
+      objectReference: {fileID: 0}
     - target: {fileID: 5839676054538296800, guid: 19614198113db1c458984b20e026e1ee, type: 3}
       propertyPath: shootBulletClip
       value: 
@@ -23571,11 +23572,6 @@ Transform:
   m_Father: {fileID: 110544461}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!198 &1880703468 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 7740541217079861583, guid: 19614198113db1c458984b20e026e1ee, type: 3}
-  m_PrefabInstance: {fileID: 1817358545}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1920509113 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4770515662116554897, guid: dbf717d9cb4466f478fa9a1600a2f654, type: 3}

@@ -75,7 +75,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -748835361
-  m_SortingLayer: 5
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -5053383548171141528, guid: 82732fca571e10740982fa149aecfbc4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -170,7 +170,7 @@ MonoBehaviour:
   enemyPoints: 1000
   currentHealth: 0
   maxHealth: 10
-  contactDamage: 3
+  contactDamage: 28
   bulletDamage: 0
   bulletSpeed: 0
   enemyHit: {fileID: 8300000, guid: a80770c020c31d242af546e8267eaa65, type: 3}
