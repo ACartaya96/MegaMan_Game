@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     BoxCollider2D box2d;
     Rigidbody2D rb;
     Animator animator;
+    [SerializeField] ParticleSystem partivlePrefab;
     [SerializeField] Transform bulletPos;
     [SerializeField] GameObject bulletPrefab;
 
@@ -632,6 +633,7 @@ public class PlayerController : MonoBehaviour
     }
     void Defeat()
     {
+        partivlePrefab.Play();
         GameManager.Instance.Defeated(gameObject);
     }
 

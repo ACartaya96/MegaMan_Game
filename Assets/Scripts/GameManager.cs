@@ -315,15 +315,7 @@ public class GameManager : MonoBehaviour
         Destroy(player);
         SceneManager.LoadScene(3);
         playerScore = finalScore;
-        TallyScore();
     }
 
-    private void TallyScore()
-    {
-        playerScore = 0;
-
-
-        playerScore = (int)Mathf.Lerp(playerScore, finalScore, 3 * Time.deltaTime);
-
-    }
+    
 }
