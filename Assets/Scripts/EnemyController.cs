@@ -96,6 +96,7 @@ public class EnemyController : MonoBehaviour
     void Defeated()
     {
         SoundManager.Instance.Play(enemyDie);
+        GameManager.Instance.PlayAnimation(transform.position);
         Destroy(gameObject);
         GameManager.Instance.AddScorePoints(this.enemyPoints);
         GameManager.Instance.enemyCount--;

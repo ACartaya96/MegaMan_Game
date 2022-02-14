@@ -30,7 +30,7 @@ public class SoundManager : MonoBehaviour
         }
 
   
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
     }
 
     public void Play(AudioClip clip)

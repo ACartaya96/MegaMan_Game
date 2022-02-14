@@ -22,6 +22,7 @@ public class Bullet_Script : MonoBehaviour
     [SerializeField] float bulletSpeed;
     [SerializeField] Vector2 bulletDirection;
     [SerializeField] float destroyDelay;
+    
 
     void Awake()
     {

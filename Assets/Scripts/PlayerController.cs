@@ -634,7 +634,7 @@ public class PlayerController : MonoBehaviour
     void Defeat()
     {
         partivlePrefab.Play();
-        GameManager.Instance.Defeated(gameObject);
+        StartCoroutine(GameManager.Instance.Defeated(gameObject));
     }
 
     public void FreezeInput(bool freeze)
@@ -667,10 +667,15 @@ public class PlayerController : MonoBehaviour
         {
             GameManager.Instance.SpawnEnemies(collision.gameObject);
         }
-        if(collision.CompareTag("Death Zones"))
+        else if(collision.CompareTag("Death Zones"))
         {
             GameManager.Instance.InstantKill();
         }
+        else if (collision.CompareTag("Win Zones"))
+        {
+            GameManager.Instance.WinGame();
+        }
+
     }
     private void OnTriggerExit2D(Collider2D collision)
     {

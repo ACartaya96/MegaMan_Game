@@ -16,7 +16,8 @@ public class GameManager : MonoBehaviour
     static int playerScore;
     static int finalScore;
     public int enemyCount = 0;
-    public int spawnCount = 0;
+    public int jumpingCount = 0;
+    public int blasterCount = 0;
     public int spawner = 0;
 
     float gameRestartTime;
@@ -31,6 +32,8 @@ public class GameManager : MonoBehaviour
     Vector3 worldLeft;
     Vector3 worldRight;
 
+    Animator animator;
+    [SerializeField] public AnimationClip explosion;
     [SerializeField] GameObject[] enemyPrefab;
 
 
@@ -46,6 +49,7 @@ public class GameManager : MonoBehaviour
         }
 
         DontDestroyOnLoad(gameObject);
+        animator = GetComponent<Animator>();
     }
 
     // Start is called before the first frame update
@@ -155,7 +159,7 @@ public class GameManager : MonoBehaviour
 
     private void FreezeBullets(bool freeze)
     {
-        GameObject[] bullets = GameObject.FindGameObjectsWithTag("Bullets");
+        GameObject[] bullets = GameObject.FindGameObjectsWithTag("Projectiles");
         foreach (GameObject bullet in bullets)
         {
             bullet.GetComponent<Bullet_Script>().FreezeBullet(freeze);
@@ -188,7 +192,7 @@ public class GameManager : MonoBehaviour
 
     public void SpawnEnemies(GameObject spawnZone)
     {
-
+        Debug.Log(spawnZone.name.ToString());
 
         if (!playerReady)
         {
@@ -204,22 +208,31 @@ public class GameManager : MonoBehaviour
                     break;
                 case "Climb 1":
 
-                    if (spawnCount < 15)
+                    if (blasterCount < 14)
                     {
-                        for (int x = 0; x < 15; x++)
+                        for (int x = 0; x < 14; x++)
                         {
                             StartCoroutine(CallSpawner(enemyPrefab[1]));
-                            spawnCount++;
+                            blasterCount++;
                         }
                     }
                     break;
                 case "Floor 2":
-                    if (spawnCount < 2)
+
+                    if (blasterCount < 14)
                     {
-                        for (int x = 0; x < 2; x++)
+                        for (int x = 0; x < 14; x++)
+                        {
+                            StartCoroutine(CallSpawner(enemyPrefab[1]));
+                            blasterCount++;
+                        }
+                    }
+                    if (jumpingCount < 4)
+                    {
+                        for (int x = 0; x < 4; x++)
                         {
                             StartCoroutine(CallSpawner(enemyPrefab[2]));
-                            spawnCount++;
+                            jumpingCount++;
                         }
                     }
                     break;
@@ -269,7 +282,7 @@ public class GameManager : MonoBehaviour
                 spawner++;
                 break;
             case "JumpingEnemy":
-                GameObject jumping = Instantiate(enemy.gameObject, SpawnContrroller.Instance.spawnPoints[spawner + 15].transform.position, Quaternion.identity);
+                GameObject jumping = Instantiate(enemy.gameObject, SpawnContrroller.Instance.spawnPoints[spawner].transform.position, Quaternion.identity);
                 spawner++;
                 break;
         }
@@ -290,7 +303,8 @@ public class GameManager : MonoBehaviour
             }
         }
         enemyCount = 0;
-        spawnCount = 0;
+        jumpingCount = 0;
+        blasterCount = 0;
         spawner = 0;
     }
 
@@ -310,12 +324,23 @@ public class GameManager : MonoBehaviour
         player.GetComponent<PlayerController>().TakeDamage(player.GetComponent<PlayerController>().maxHealth);
     }
 
-    public void Defeated(GameObject player)
+    public IEnumerator Defeated(GameObject player)
     {
+
+
+        yield return new WaitForSeconds(1f);
+        FreezeEnemies(true);
+        FreezeBullets(true);
         Destroy(player);
         SceneManager.LoadScene(3);
         playerScore = finalScore;
     }
 
+    public void WinGame()
+    {
+        SceneManager.LoadScene(2);
+    }
+
     
 }
+    

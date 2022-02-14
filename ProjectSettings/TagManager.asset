@@ -10,6 +10,8 @@ TagManager:
   - Spawn Zones
   - Ladder
   - Death Zones
+  - Projectiles
+  - Win Zones
   layers:
   - Default
   - TransparentFX
