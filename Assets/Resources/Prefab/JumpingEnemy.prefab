@@ -170,7 +170,7 @@ MonoBehaviour:
   enemyPoints: 1000
   currentHealth: 0
   maxHealth: 10
-  contactDamage: 28
+  contactDamage: 10
   bulletDamage: 0
   bulletSpeed: 0
   enemyHit: {fileID: 8300000, guid: a80770c020c31d242af546e8267eaa65, type: 3}

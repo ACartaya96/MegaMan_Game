@@ -324,15 +324,12 @@ public class GameManager : MonoBehaviour
         player.GetComponent<PlayerController>().TakeDamage(player.GetComponent<PlayerController>().maxHealth);
     }
 
-    public IEnumerator Defeated(GameObject player)
+    public void Defeated(GameObject player)
     {
-
-
-        yield return new WaitForSeconds(1f);
         FreezeEnemies(true);
         FreezeBullets(true);
-        Destroy(player);
-        SceneManager.LoadScene(3);
+        Destroy(player, 1f);
+        SceneManager.LoadScene(4);
         playerScore = finalScore;
     }
 

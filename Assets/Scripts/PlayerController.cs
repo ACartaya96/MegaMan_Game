@@ -634,9 +634,8 @@ public class PlayerController : MonoBehaviour
     }
     void Defeat()
     {
-        Instantiate(partivlePrefab, transform.position, Quaternion.identity);
-        Destroy(gameObject, 2f);
-        //StartCoroutine(GameManager.Instance.Defeated(gameObject));
+       
+        GameManager.Instance.Defeated(gameObject);
     }
 
     public void FreezeInput(bool freeze)
