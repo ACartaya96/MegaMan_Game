@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moving: -1
-  speed: 4
+  speed: 3
   radius: 10
   distance: 6
   changeTime: 3
